@@ -38,7 +38,9 @@ func _fixed_process(delta):
 	
 	velocity = speed * direction * delta
 	move(velocity)
-	emit_signal("move")
+	
+	if is_moving:
+		emit_signal("move")
 
 
 func turn_towards(_direction):
