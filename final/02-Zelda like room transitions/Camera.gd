@@ -13,7 +13,7 @@ func _ready():
 
 
 # This is a basic solution to the problem. Another way would be to divide the world using a grid
-# and to check on which cell the player is. With each map containing a constant amount of cells,
+# and to check on which cell the player is. With each map containing the same amount of cells,
 # we can calculate where the player is in the world
 # (hint: the tileset we use for the background is a grid!)
 func update_camera():
