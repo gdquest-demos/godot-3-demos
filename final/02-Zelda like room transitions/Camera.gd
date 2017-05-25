@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var screen_size = Vector2(Globals.get("display/width"), Globals.get("display/height")) 
+onready var screen_size = OS.get_screen_size()
 onready var player = get_node("Player")
 onready var last_player_pos = player.get_pos()
 
