@@ -2,7 +2,6 @@ extends Node2D
 
 onready var window_size = OS.get_window_size()
 onready var player = get_node("Player")
-onready var last_player_pos = player.get_pos()
 onready var player_world_pos = get_player_world_pos()
 
 
@@ -35,5 +34,4 @@ func update_camera():
 		transform = get_viewport().get_canvas_transform()
 		transform[2] = -player_world_pos * window_size
 		get_viewport().set_canvas_transform(transform)
-
 	return transform
