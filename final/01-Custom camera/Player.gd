@@ -1,3 +1,4 @@
+# Basic top-down character controller. Instantly sets the speed to MAX_SPEED. No acceleration or decceleration
 extends KinematicBody2D
 
 var direction = Vector2()
@@ -6,7 +7,6 @@ var velocity = Vector2()
 const MAX_SPEED = 400
 
 signal move
-var camera
 
 enum Direction {TOP, RIGHT, DOWN, LEFT}
 
@@ -16,7 +16,9 @@ func _ready():
 
 
 func _fixed_process(delta):
+	# is_moving is a helper boolean. It's common to use this check several times throughout the code block.
 	var is_moving = Input.is_action_pressed("move_down") or Input.is_action_pressed("move_up") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right")
+
 	if is_moving:
 		speed = MAX_SPEED
 
@@ -33,10 +35,12 @@ func _fixed_process(delta):
 	
 	velocity = speed * direction * delta
 	move(velocity)
-	emit_signal("move")
+	if is_moving:
+		emit_signal("move")
 
 
 func turn_towards(_direction):
+	# This method allows us to use the enum constants TOP, DOWN, LEFT and RIGHT to set the player direction, which is easier to read than using Vector2s every time.
 	if _direction == TOP:
 		direction = Vector2(0, -1)
 	elif _direction == DOWN:
