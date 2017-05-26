@@ -4,8 +4,12 @@ In this repo, you'll find all the files for the game creation tutorials. These a
 
 Project organization:
 
-- In ./start, you'll find the starting version of the projects, to follow the tutorials on GDquest
-- ./final contains the final version of the project, following the corresponding tutorials
-- ./assets contains all the images and source PSD files used in the projects
+- In start, you'll find the starting version of the projects, to follow the tutorials on GDquest
+- final contains the final version of the project, following the corresponding tutorials
+- assets contains all the images and source PSD files used in the projects
 
-It's a Work in Progress. If you find any mistake, file an issue or leave a PR!
+## Contributors
+
+- Lars Kokemohr, dean of engineering at the [school4games Berlin](http://school4games.net/)
+
+It's a Work in Progress. If you find any mistake, please file an issue or leave a PR!
