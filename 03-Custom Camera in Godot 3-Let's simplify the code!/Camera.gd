@@ -7,7 +7,7 @@ onready var last_player_pos = player.get_pos()
 
 func _ready():
 	var canvas_transform = get_viewport().get_canvas_transform()
-	canvas_transform[2] = player_world_pos * screen_size
+	canvas_transform[2] = last_player_pos - screen_size / 2
 	get_viewport().set_canvas_transform(canvas_transform)
 
 
@@ -19,5 +19,3 @@ func update_camera():
 	var canvas_transform = get_viewport().get_canvas_transform()
 	canvas_transform[2] += player_offset
 	get_viewport().set_canvas_transform(canvas_transform)
-	
-	print('moved!')
