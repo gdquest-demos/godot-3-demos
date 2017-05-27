@@ -18,4 +18,4 @@ Project organization:
 
 - Lars Kokemohr, dean of engineering at the [school4games Berlin](http://school4games.net/)
 
-It's a Work in Progress. If you find any mistake, please file an issue or leave a PR!
+If you find any mistake, please file an issue or leave a PR!
