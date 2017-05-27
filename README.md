@@ -1,12 +1,18 @@
 # 30 days, Daily Godot Tutorial Challenge!
 
-In this repo, you'll find all the files for the game creation tutorials. These are provided under MIT/CC0 licence terms, as part of the [Make Professional 2d Game with Godot Kickstarter](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou).
+In this repo, you'll find all the files for the game creation tutorials. These are provided for free, funded by the [Make Professional 2d Game with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) Kickstarter.
 
 Project organization:
 
-- In start, you'll find the starting version of the projects, to follow the tutorials on GDquest
-- final contains the final version of the project, following the corresponding tutorials
-- assets contains all the images and source PSD files used in the projects
+- In **start**, you'll find the starting version of the projects, to follow the tutorials on GDquest
+- **final** contains the final version of the Godot example projects, following the corresponding tutorials
+- **assets** contains all the images and source PSD files used in the projects
+
+## Links
+
+1. [Youtube playlist](https://www.youtube.com/playlist?list=PLhqJJNjsQ7KEr_YlibZ3SBuzfw9xwGduK)
+2. [Tutorial page](http://gdquest.com/tutorial/game-design/godot/30-days-free-game-creation-tutorial/) on GDquest
+3. [Kickstarter page](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) (Please help spread the word!)
 
 ## Contributors
 
