@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://Grid.gd" type="Script" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://Player.png" type="Texture" id=4]
+[ext_resource path="res://Obstacle.png" type="Texture" id=5]
+
+[node name="Game" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="Grid" type="Node2D" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="Player" type="KinematicBody2D" parent="Grid"]
+
+editor/display_folded = true
+transform/pos = Vector2( 223.469, 163.191 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Grid/Player"]
+
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle" type="Node2D" parent="Grid"]
+
+editor/display_folded = true
+transform/pos = Vector2( 624, 144 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Grid/Obstacle"]
+
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle1" type="Node2D" parent="Grid"]
+
+editor/display_folded = true
+transform/pos = Vector2( 432, 432 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Grid/Obstacle1"]
+
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle2" type="Node2D" parent="Grid"]
+
+editor/display_folded = true
+transform/pos = Vector2( 144, 528 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Grid/Obstacle2"]
+
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Obstacle3" type="Node2D" parent="Grid"]
+
+editor/display_folded = true
+transform/pos = Vector2( 1008, 336 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Grid/Obstacle3"]
+
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+

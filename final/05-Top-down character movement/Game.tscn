@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Player.png" type="Texture" id=2]
+
+[node name="Game" type="Node"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( 559.469, 297.191 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Player"]
+
+texture = ExtResource( 2 )
+
+
