@@ -13,16 +13,12 @@ var speed = 0
 var velocity = Vector2()
 
 var target_pos = Vector2()
-var pos_on_grid = Vector2()
 var is_moving = false
 
 onready var grid = get_parent()
 
 func _ready():
 	set_fixed_process(true)
-	pos_on_grid = grid.calculate_grid_pos(get_pos())
-	var grid_to_world = grid.calculate_world_pos(pos_on_grid)
-	set_pos(grid_to_world)
 
 
 func _fixed_process(delta):
@@ -38,10 +34,8 @@ func _fixed_process(delta):
 		elif Input.is_action_pressed("move_left"):
 			direction = LEFT
 
-		if grid.is_cell_vacant(pos_on_grid + direction):
-			pos_on_grid += direction
-			target_pos = grid.calculate_world_pos(pos_on_grid)
-			print(target_pos)
+		if grid.is_cell_vacant(get_pos(), direction):
+			target_pos = grid.update_child_pos(self, get_pos(), direction)
 			is_moving = true
 
 	speed = MAX_SPEED if is_moving else 0
