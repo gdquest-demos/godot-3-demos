@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
-var direction = Vector2()
-
-var speed = 0
 const MAX_SPEED = 400
 
+var speed = 0
+var direction = Vector2()
 var velocity = Vector2()
 
+onready var grid = get_parent()
 
 func _ready():
 	set_fixed_process(true)
