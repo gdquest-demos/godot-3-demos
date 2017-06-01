@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Grid.gd" type="Script" id=1]
+[ext_resource path="res://GridVisualizer.gd" type="Script" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://Player.png" type="Texture" id=4]
+
+[node name="Game" type="Node"]
+
+[node name="Grid" type="TileMap" parent="."]
+
+mode = 0
+tile_set = null
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray(  )
+script/script = ExtResource( 1 )
+
+[node name="GridVisualizer" type="Node2D" parent="Grid"]
+
+visibility/opacity = 0.3
+script/script = ExtResource( 2 )
+
+[node name="Player" type="KinematicBody2D" parent="Grid"]
+
+editor/display_folded = true
+transform/pos = Vector2( 559.469, 297.191 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Grid/Player"]
+
+texture = ExtResource( 4 )
+
+
