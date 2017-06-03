@@ -39,15 +39,15 @@ func is_cell_vacant(pos, direction):
 	return false
 
 
-func update_child_pos(child, new_pos, direction):
+func update_child_pos(child_node):
 	# Move a child to a new position in the grid Array
 	# Returns the new target world position of the child
-	var grid_pos = world_to_map(new_pos)
+	var grid_pos = world_to_map(child_node.get_pos())
 	print(grid_pos)
 	grid[grid_pos.x][grid_pos.y] = null
 	
-	var new_grid_pos = grid_pos + direction
-	grid[new_grid_pos.x][new_grid_pos.y] = child.get_name()
+	var new_grid_pos = grid_pos + child_node.direction
+	grid[new_grid_pos.x][new_grid_pos.y] = child_node.type
 	
 	var target_pos = map_to_world(new_grid_pos) + half_tile_size
 	return target_pos
