@@ -36,7 +36,7 @@ func _fixed_process(delta):
 		direction.x = 1
 
 	if not is_moving and direction != Vector2():
-		target_direction = direction
+		target_direction = direction.normalized()
 		if grid.is_cell_vacant(get_pos(), direction):
 			target_pos = grid.update_child_pos(get_pos(), direction, type)
 			is_moving = true
@@ -49,7 +49,7 @@ func _fixed_process(delta):
 		var move_distance = velocity.length()
 
 		if move_distance > distance_to_target:
-			velocity = target_direction.normalized() * distance_to_target
+			velocity = target_direction * distance_to_target
 			is_moving = false
 
 		move(velocity)
