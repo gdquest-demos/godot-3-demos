@@ -34,7 +34,7 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 
 **Zoom/View**:
 
-- Shift F11: Distraction free mode
+- <kbd>Shift</kbd><kbd>F11</kbd>: Distraction free mode
 - <kbd>Ctrl</kbd><kbd>=</kbd> | <kbd>Ctrl</kbd><kbd>-</kbd>: Zoom in, Zoom out
 - <kbd>Ctrl</kbd><kbd>0</kbd>: Reset zoom
 
