@@ -13,9 +13,6 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 - <kbd>Shift</kbd><kbd>F1</kbd>: Search current selection in the reference
 - <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>S</kbd>: Save all files
 - <kbd>Ctrl</kbd><kbd>W</kbd>: Close the current file
-
-### Not specific to Godot
-
 - <kbd>Ctrl</kbd><kbd>Z</kbd> | <kbd>Ctrl</kbd><kbd>Y</kbd>: Undo, Redo
 - <kbd>Ctrl</kbd><kbd>C</kbd> | <kbd>Ctrl</kbd><kbd>X</kbd>(_with text selected_): Copy selection, Cut selection
 - <kbd>Ctrl</kbd><kbd>V</kbd>: Paste
