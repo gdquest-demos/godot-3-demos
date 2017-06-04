@@ -74,6 +74,6 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 ## Breakpoints
 
 - <kbd>F9</kbd>: Toggle breakpoint
-- <kbd>Ctrl</kbd>: Go to next breakpoint
-- <kbd>Ctrl</kbd>: Go to previous breakpoint
+- <kbd>Ctrl</kbd><kbd>,</kbd>: Go to next breakpoint
+- <kbd>Ctrl</kbd><kbd>.</kbd>: Go to previous breakpoint
 - <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F9</kbd>: Remove all breakpoints
