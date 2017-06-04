@@ -17,9 +17,9 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 **Not specific to Godot**:
 
 - <kbd>Ctrl</kbd><kbd>A</kbd>: Select all
-- <kbd>Ctrl</kbd><kbd>Z</kbd><kbd>Ctrl</kbd><kbd>Y</kbd>: Undo, Redo
+- <kbd>Ctrl</kbd><kbd>Z</kbd> | <kbd>Ctrl</kbd><kbd>Y</kbd>: Undo, Redo
 - <kbd>Ctrl</kbd><kbd>Left</kbd> | <kbd>Ctrl</kbd><kbd>Right</kbd>: Jump to the previous word, Jump to the next word
-- <kbd>Ctrl</kbd><kbd>C</kbd><kbd>Ctrl</kbd><kbd>X</kbd>(_with text selected_): Copy selection, Cut selection
+- <kbd>Ctrl</kbd><kbd>C</kbd> | <kbd>Ctrl</kbd><kbd>X</kbd>(_with text selected_): Copy selection, Cut selection
 - <kbd>Ctrl</kbd><kbd>V</kbd>: Paste
 
 **Zoom**:
@@ -33,7 +33,7 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 **Copy and insert**:
 
 - <kbd>Ctrl</kbd><kbd>Enter</kbd> | <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Enter</kbd>: Insert line below, Insert line above
-- <kbd>Ctrl</kbd><kbd>C</kbd><kbd>Ctrl</kbd><kbd>X</kbd>(_with no text selected_): Copy line, cut line
+- <kbd>Ctrl</kbd><kbd>C</kbd> | <kbd>Ctrl</kbd><kbd>X</kbd>(_with no text selected_): Copy line, cut line
 - <kbd>Ctrl</kbd><kbd>B</kbd>: Clone down
 
 **Edit line**:
@@ -67,11 +67,3 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 - <kbd>Ctrl</kbd>: Go to next breakpoint
 - <kbd>Ctrl</kbd>: Go to previous breakpoint
 - <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F9</kbd>: Remove all breakpoints
-
-
-## My favorites
-
-- <kbd>Shift</kbd><kbd>F1</kbd>: Search current selection in the reference
-- <kbd>Ctrl</kbd><kbd>Enter</kbd> | <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Enter</kbd>: Insert previous/next line
-- <kbd>Ctrl</kbd><kbd>C</kbd><kbd>Ctrl</kbd><kbd>X</kbd>(_without selection_): Copy/cut line
-- <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>O</kbd>: Quick open script/scene
