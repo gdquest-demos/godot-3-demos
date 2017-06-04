@@ -1,6 +1,6 @@
 # 30 days, Daily Godot Tutorial Challenge!
 
-In this repo, you'll find all the files for the game creation tutorials. These are provided for free, funded by the [Make Professional 2d Game with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) Kickstarter.
+In this repo, you'll find all the files for the game creation tutorials. These are provided for free, funded by the [Make Professional 2D Games with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) Kickstarter.
 
 Project organization:
 

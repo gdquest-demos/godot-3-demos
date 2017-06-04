@@ -5,3 +5,5 @@ bad/
 
 assets/icon/
 *.psd
+
+.vscode/
