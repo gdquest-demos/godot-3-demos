@@ -22,15 +22,15 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 
 **Move**:
 
-- </kbd>Home<kbd> | </kbd>End<kbd>: Jump to start of line, Jump to end of line
-- </kbd>Ctrl<kbd></kbd>Home<kbd> | </kbd>Ctrl<kbd></kbd>End<kbd>: Jump to start of document, Jump to end of document
+- <kbd>Home</kbd> | <kbd>End</kbd>: Jump to start of line, Jump to end of line
+- <kbd>Ctrl</kbd><kbd>Home</kbd> | <kbd>Ctrl</kbd><kbd>End</kbd>: Jump to start of document, Jump to end of document
 - <kbd>Ctrl</kbd><kbd>Left</kbd> | <kbd>Ctrl</kbd><kbd>Right</kbd>: Jump to the previous word, Jump to the next word
 
 **Select**:
 
 - <kbd>Ctrl</kbd><kbd>A</kbd>: Select all
-- </kbd>Shift<kbd></kbd>Home<kbd> | </kbd>Shift<kbd></kbd>End<kbd>: Select to start of line, Select to end of line
-- </kbd>Ctrl<kbd></kbd>Shift<kbd></kbd>Home<kbd> | </kbd>Ctrl<kbd></kbd>Shift<kbd></kbd>End<kbd>: Select to start of document, Select to end of document
+- <kbd>Shift</kbd><kbd>Home</kbd> | <kbd>Shift</kbd><kbd>End</kbd>: Select to start of line, Select to end of line
+- <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Home</kbd> | <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>End</kbd>: Select to start of document, Select to end of document
 
 **Zoom/View**:
 
