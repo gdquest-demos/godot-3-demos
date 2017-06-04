@@ -14,18 +14,31 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 - <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Alt</kbd><kbd>S</kbd>: Save all files
 - <kbd>Ctrl</kbd><kbd>W</kbd>: Close the current file
 
-**Not specific to Godot**:
+### Not specific to Godot
 
-- <kbd>Ctrl</kbd><kbd>A</kbd>: Select all
 - <kbd>Ctrl</kbd><kbd>Z</kbd> | <kbd>Ctrl</kbd><kbd>Y</kbd>: Undo, Redo
-- <kbd>Ctrl</kbd><kbd>Left</kbd> | <kbd>Ctrl</kbd><kbd>Right</kbd>: Jump to the previous word, Jump to the next word
 - <kbd>Ctrl</kbd><kbd>C</kbd> | <kbd>Ctrl</kbd><kbd>X</kbd>(_with text selected_): Copy selection, Cut selection
 - <kbd>Ctrl</kbd><kbd>V</kbd>: Paste
 
-**Zoom**:
+**Move**:
 
+- </kbd>Home<kbd> | </kbd>End<kbd>: Jump to start of line, Jump to end of line
+- </kbd>Ctrl<kbd></kbd>Home<kbd> | </kbd>Ctrl<kbd></kbd>End<kbd>: Jump to start of document, Jump to end of document
+- <kbd>Ctrl</kbd><kbd>Left</kbd> | <kbd>Ctrl</kbd><kbd>Right</kbd>: Jump to the previous word, Jump to the next word
+
+**Select**:
+
+- <kbd>Ctrl</kbd><kbd>A</kbd>: Select all
+- </kbd>Shift<kbd></kbd>Home<kbd> | </kbd>Shift<kbd></kbd>End<kbd>: Select to start of line, Select to end of line
+- </kbd>Ctrl<kbd></kbd>Shift<kbd></kbd>Home<kbd> | </kbd>Ctrl<kbd></kbd>Shift<kbd></kbd>End<kbd>: Select to start of document, Select to end of document
+
+**Zoom/View**:
+
+- Shift F11: Distraction free mode
 - <kbd>Ctrl</kbd><kbd>=</kbd> | <kbd>Ctrl</kbd><kbd>-</kbd>: Zoom in, Zoom out
 - <kbd>Ctrl</kbd><kbd>0</kbd>: Reset zoom
+
+
 
 
 ## Line manipulation
