@@ -32,7 +32,7 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 
 **Copy and insert**:
 
-- <kbd>Ctrl</kbd> <kbd>Enter</kbd>, <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Enter</kbd>: Insert line below, Insert line above
+- <kbd>Ctrl</kbd> <kbd>Enter</kbd> | <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Enter</kbd>: Insert line below, Insert line above
 - <kbd>Ctrl</kbd><kbd>C</kbd> <kbd>Ctrl</kbd><kbd>X</kbd>(_with no text selected_): Copy line, cut line
 - <kbd>Ctrl</kbd><kbd>B</kbd>: Clone down
 
@@ -41,16 +41,16 @@ You can edit Godot's shortcuts anytime in the top right corner of the editor. Cl
 - <kbd>Alt</kbd> <kbd>Up</kbd>, <kbd>Alt</kbd> <kbd>Down</kbd>: Move line up, Move line down
 - <kbd>Alt</kbd> <kbd>Left</kbd>, <kbd>Alt</kbd> <kbd>Right</kbd>: Unindent line, Indent line
 - <kbd>Ctrl</kbd><kbd>I</kbd>: Auto indent (_indents lines following if statements_)
-- <kbd>Ctrl</kbd> <kbd>Alt</kbd><kbd>T</kbd>: Remove trailing whitespace
+- <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>T</kbd>: Remove trailing whitespace
 - <kbd>Ctrl</kbd><kbd>K</kbd>: Toggle comment
 
 
 ## Navigation
 
 - <kbd>Ctrl</kbd><kbd>L</kbd>: Go to line
-- <kbd>Ctrl</kbd> <kbd>Shift</kbd><kbd>F</kbd>: Go to function
-- <kbd>Ctrl</kbd> <kbd>Alt</kbd><kbd>O</kbd>: Quick open script
-- <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Left</kbd>, <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Right</kbd>: Navigate open file history
+- <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd>: Go to function
+- <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>O</kbd>: Quick open script
+- <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Left</kbd>, <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Right</kbd>: Navigate open file history
 
 
 ## Find and replace
