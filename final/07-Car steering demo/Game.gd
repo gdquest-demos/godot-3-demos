@@ -1,7 +1,7 @@
 extends Node
 
 var debug = false
-onready var MovementVisualizer = get_node("Player/MovementVisualizer")
+onready var MovementVisualizer = get_node("Car/MovementVisualizer")
 
 func _ready():
 	set_process_input(true)
