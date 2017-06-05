@@ -5,20 +5,18 @@ var speed = 0
 var acceleration = 1800
 var decceleration = 3000
 
-var velocity = Vector2()
-var target_velocity = Vector2()
+var motion = Vector2()
+var target_motion = Vector2()
 var steering = Vector2()
 const MASS = 2
 
 const MAX_SPEED = 600
 
 var Skin = null
-var size = Vector2()
 var target_angle = 0
 
 func _ready():
 	Skin = get_node("Sprite")
-	size = Skin.get_texture().get_size() * Skin.get_scale()
 	set_fixed_process(true)
 
 
@@ -42,18 +40,18 @@ func _fixed_process(delta):
 
 	speed = clamp(speed, 0, MAX_SPEED)
 	
-	target_velocity = speed * direction.normalized() * delta
-	steering = target_velocity - velocity
+	target_motion = speed * direction.normalized() * delta
+	steering = target_motion - motion
 
 	if steering.length() > 1:
 		steering = steering.normalized()
 	
-	velocity += steering / MASS
+	motion += steering / MASS
 
 	if speed == 0:
-		velocity = Vector2()
+		motion = Vector2()
 
-	move(velocity)
-	if velocity != Vector2():
-		target_angle = rad2deg(atan2(velocity.x, velocity.y) - PI/2)
-		Skin.set_rot(deg2rad(target_angle))
+	move(motion)
+	if motion != Vector2():
+		target_angle = atan2(motion.x, motion.y) - PI/2
+		Skin.set_rot(target_angle)
