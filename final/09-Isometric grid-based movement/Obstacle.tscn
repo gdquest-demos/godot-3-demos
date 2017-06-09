@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Obstacle.png" type="Texture" id=1]
+
+[node name="Obstacle" type="Node2D"]
+
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -0.471741, -0.125336 )
+texture = ExtResource( 1 )
+offset = Vector2( 0.471741, -16.1662 )
+
+
