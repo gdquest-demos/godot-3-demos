@@ -4,6 +4,10 @@ extends TileMap
 enum ENTITY_TYPES {PLAYER, OBSTACLE, COLLECTIBLE}
 
 var tile_size = get_cell_size()
+# The map_to_world function returns the position of the tile's top left corner in isometric space,
+# we have to offset the objects on the Y axis to center them on the tiles
+var tile_offset = Vector2(0, tile_size.y / 2)
+
 var grid_size = Vector2(16, 16)
 
 var grid = []
@@ -25,8 +29,8 @@ func _ready():
 
 	# Player
 	var new_player = Player.instance()
-	# We don't need to add tile_size/2 anymore
-	new_player.set_pos(map_to_world(Vector2(4,4)))
+	# We still have to offset the objects on the Y axis to center them on the tiles
+	new_player.set_pos(map_to_world(Vector2(4,4)) + tile_offset)
 	# Be careful to add the Player and Obstacles as children of the YSort node, not the grid!
 	Sorter.add_child(new_player)
 
@@ -43,8 +47,7 @@ func _ready():
 
 	for pos in positions:
 		var new_obstacle = Obstacle.instance()
-		# Same here, no need to add tile_size/2 to get the tile's center
-		new_obstacle.set_pos(map_to_world(pos))
+		new_obstacle.set_pos(map_to_world(pos) + tile_offset)
 		grid[pos.x][pos.y] = new_obstacle.get_name()
 		Sorter.add_child(new_obstacle)
 
@@ -70,7 +73,7 @@ func update_child_pos(pos, direction, type):
 	var new_grid_pos = grid_pos + direction
 	grid[new_grid_pos.x][new_grid_pos.y] = type
 
-	var target_pos = map_to_world(new_grid_pos)
+	var target_pos = map_to_world(new_grid_pos) + tile_offset
 
 	# Print statements help to understand what's happening. We're using GDscript's string format operator % to convert
 	# Vector2s to strings and integrate them to a sentence. The syntax is "... %s" % value / "... %s ... %s" % [value_1, value_2]
