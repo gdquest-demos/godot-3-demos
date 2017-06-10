@@ -1,3 +1,4 @@
+tool
 extends KinematicBody2D
 
 
@@ -20,20 +21,17 @@ func _fixed_process(delta):
 	var detect_count = 0
 	for node in get_tree().get_nodes_in_group('detectable'):
 		if pos.distance_to(node.pos) < DETECT_RADIUS:
-			pass
-			# Find the angle to the node, using the dot product
-			
-			# If it's within the Player's cone of vision, the object is detected
-			
-	
+			var angle_to_node = rad2deg(direction.angle_to(node.direction_from_player))
+			if abs(angle_to_node) < FOV/2:
+				detect_count += 1
+
+
 	# DRAWING
 	if detect_count > 0:
 		draw_color = RED
 	else:
 		draw_color = GREEN
 	update()
-
-
 
 
 # Drawing the FOV

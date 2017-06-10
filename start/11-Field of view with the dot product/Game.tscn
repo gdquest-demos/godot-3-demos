@@ -43,7 +43,11 @@ texture = ExtResource( 3 )
 
 [node name="Object" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 497.307, 332.239 )
+transform/pos = Vector2( 224.307, 364.239 )
+
+[node name="Object8" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 224.307, 364.239 )
 
 [node name="Object1" parent="." instance=ExtResource( 4 )]
 
