@@ -1,3 +1,4 @@
+# Game state
 extends Node
 
 func _ready():

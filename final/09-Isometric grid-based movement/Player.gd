@@ -7,7 +7,7 @@ extends KinematicBody2D
 
 var direction = Vector2()
 
-const MAX_SPEED = 400
+const MAX_SPEED = 1200
 
 var speed = 0
 var motion = Vector2()
