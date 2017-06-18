@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://DirectionVisualizer.gd" type="Script" id=2]
+[ext_resource path="res://PrintAttributes.gd" type="Script" id=3]
+[ext_resource path="res://Player.png" type="Texture" id=4]
+
+[node name="Player" type="KinematicBody2D" groups=[
+"persistent",
+]]
+
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+max_health = 10
+
+[node name="DirectionVisualizer" type="Node2D" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 36.0
+margin/top = -25.0
+margin/right = 76.0
+margin/bottom = -11.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 4 )
+
+
