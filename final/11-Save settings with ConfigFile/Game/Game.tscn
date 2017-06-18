@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Game/Player.gd" type="Script" id=1]
+[ext_resource path="res://utils/DirectionVisualizer.gd" type="Script" id=2]
+[ext_resource path="res://Game/Player.png" type="Texture" id=3]
+[ext_resource path="res://Game/Object.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+
+transform/pos = Vector2( 640.78, 360.839 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="MovementVisualizer" type="Node2D" parent="Player"]
+
+script/script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="Player"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Player"]
+
+texture = ExtResource( 3 )
+
+[node name="Object" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 497.307, 332.239 )
+
+[node name="Object1" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 813.397, 198.452 )
+
+[node name="Object2" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 745.768, 364.583 )
+
+[node name="Object3" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 710.28, 605.489 )
+
+[node name="Object4" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 997.17, 466.026 )
+
+[node name="Object5" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 357.64, 468.966 )
+
+[node name="Object7" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 331.177, 226.386 )
+
+[node name="Object6" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 548.152, 133.691 )
+
+
