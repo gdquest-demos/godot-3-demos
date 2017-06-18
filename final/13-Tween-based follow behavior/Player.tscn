@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Utils/DirectionVisualizer.gd" type="Script" id=2]
+[ext_resource path="res://Player.png" type="Texture" id=3]
+
+
+[node name="Player" type="KinematicBody2D" groups=[
+"persistent",
+]]
+
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+max_health = 10
+
+[node name="DirectionVisualizer" type="Node2D" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+
