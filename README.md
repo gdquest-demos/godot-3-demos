@@ -2,6 +2,8 @@
 
 In this repo, you'll find all the files for the game creation tutorials. These are provided for free, funded by the [Make Professional 2D Games with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) Kickstarter.
 
+[[https://github.com/GDquest/Godot-30-days-tutorial-challenge-2017/blob/master/assets/open_source_demos_illust_small.png|alt=screenshot of the demos]]
+
 Project organization:
 
 - In **start**, you'll find the starting version of the projects, to follow the tutorials on GDquest
