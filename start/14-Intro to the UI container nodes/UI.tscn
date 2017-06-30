@@ -1,0 +1,228 @@
+[gd_scene load_steps=11 format=1]
+
+[ext_resource path="res://Font/Nanami.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://UI/blue.tex" type="Texture" id=2]
+[ext_resource path="res://UI/yellow.tex" type="Texture" id=3]
+[ext_resource path="res://UI/button_blue.tex" type="Texture" id=4]
+[ext_resource path="res://UI/button_green.tex" type="Texture" id=5]
+[ext_resource path="res://UI/button_yellow.tex" type="Texture" id=6]
+[ext_resource path="res://UI/horizontal_background.tex" type="Texture" id=7]
+[ext_resource path="res://UI/horizontal_bar.tex" type="Texture" id=8]
+[ext_resource path="res://UI/radial_background.tex" type="Texture" id=9]
+[ext_resource path="res://UI/radial_bar.tex" type="Texture" id=10]
+
+[node name="UI" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="Title" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 32.0
+margin/top = -73.0
+margin/right = 984.0
+margin/bottom = -41.0
+custom_fonts/font = ExtResource( 1 )
+text = "Try to resize the UI node!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="wPatch9Frame1" type="Patch9Frame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = -54.0
+margin/top = 104.0
+margin/right = 346.0
+margin/bottom = 392.0
+texture = ExtResource( 2 )
+patch_margin/left = 20
+patch_margin/top = 20
+patch_margin/right = 20
+patch_margin/bottom = 20
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+rect/min_size = Vector2( 128, 128 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -48.0
+margin/top = -2.0
+margin/right = 80.0
+margin/bottom = 126.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 674.0
+margin/top = -22.0
+margin/right = 1074.0
+margin/bottom = 266.0
+custom_fonts/font = ExtResource( 1 )
+text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ButtonGroup" type="ButtonGroup" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1128.0
+margin/top = 8.0
+margin/right = 1224.0
+margin/bottom = 296.0
+alignment = 0
+
+[node name="TextureButton" type="TextureButton" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 96.0
+margin/bottom = 96.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+textures/hover = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="TextureButton1" type="TextureButton" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 96.0
+margin/right = 96.0
+margin/bottom = 192.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+textures/hover = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 1
+margin/left = 0.0
+margin/top = 192.0
+margin/right = 96.0
+margin/bottom = 288.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+textures/hover = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = -168.0
+margin/top = 500.0
+margin/right = 385.0
+margin/bottom = 686.0
+range/min = 1.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 40.0
+range/exp_edit = false
+range/rounded = true
+texture/under = ExtResource( 7 )
+texture/over = null
+texture/progress = ExtResource( 8 )
+radial_fill/fill_degrees = 360.0
+radial_fill/center_offset = Vector2( 0, 0 )
+
+[node name="RadialBar" type="TextureProgress" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 469.0
+margin/top = 482.0
+margin/right = 672.0
+margin/bottom = 668.0
+range/min = 1.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 40.0
+range/exp_edit = false
+range/rounded = false
+texture/under = ExtResource( 9 )
+texture/over = null
+texture/progress = ExtResource( 10 )
+mode = 4
+radial_fill/fill_degrees = 360.0
+radial_fill/center_offset = Vector2( 0, 0 )
+
+[node name="wPatch9Frame" type="Patch9Frame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 798.0
+margin/top = 304.0
+margin/right = 1002.0
+margin/bottom = 490.0
+texture = ExtResource( 2 )
+patch_margin/left = 20
+patch_margin/top = 20
+patch_margin/right = 20
+patch_margin/bottom = 20
+
+
