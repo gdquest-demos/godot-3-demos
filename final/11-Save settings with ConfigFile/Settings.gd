@@ -58,14 +58,14 @@ func load_settings():
 		print("Error loading the settings. Error code: %s" % error)
 		return LOAD_ERROR_COULDNT_OPEN
 
-	var values = []
 	for section in _settings.keys():
 		for key in _settings[section].keys():
 			# We store the settings in the dictionary. In this demo, it's up to the other nodes to retrieve the settings,
 			# with get_setting and set_setting below.
 			# Example 13-Save offers a slightly better, object oriented solution to build upon this example 
 			# (delegating save and load to the other nodes, the Save.gd script being only responsible to save and load on/from the disk)
-			var val = _settings[section][key]
+			var val = _config_file.get_value(section,key)
+			_settings[section][key] = val
 			# Printing the values for debug purposes
 			print("%s: %s" % [key, val])
 	return LOAD_SUCCESS
