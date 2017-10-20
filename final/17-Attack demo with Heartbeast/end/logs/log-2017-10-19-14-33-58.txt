@@ -1,0 +1,6 @@
+OpenGL ES 3.0 Renderer: Quadro M1000M/PCIe/SSE2
+GLES3: max ubo light: 409
+GLES3: max ubo reflections: 455, ubo size: 144
+WARNING: not found: gdnative/singletons
+Registered interface Native mobile
+SVG_GENERATION TIME: 0.09

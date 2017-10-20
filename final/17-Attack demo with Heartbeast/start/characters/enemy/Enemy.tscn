@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://characters/enemy/foe_pink.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20.2295, 16 )
+
+[node name="Enemy" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+max_health = 2
+patrol_distance = 200
+
+[node name="Body" parent="."]
+
+texture = ExtResource( 3 )
+offset = Vector2( 0, -129 )
+
+[node name="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+
+[node name="WeaponSpawnPoint" parent="."]
+
+position = Vector2( 0, -42 )
+
+[node name="DisplayDebugInfo" parent="."]
+
+margin_top = -134.0
+margin_bottom = -120.0
+
+[node name="WaitTimer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="WaitTimer" to="." method="_on_WaitTimer_timeout"]
+
+

@@ -1,0 +1,8 @@
+OpenGL ES 3.0 Renderer: Quadro M1000M/PCIe/SSE2
+GLES3: max ubo light: 409
+GLES3: max ubo reflections: 455, ubo size: 144
+Registered interface Native mobile
+**ERROR**: Node not found: WeaponSpawnPoint/Spear
+   At: scene\main\node.cpp:1518:Node::get_node() - Condition ' !node ' is true. returned: 0
+**ERROR**: Node not found: AttackTimer
+   At: scene\main\node.cpp:1518:Node::get_node() - Condition ' !node ' is true. returned: 0

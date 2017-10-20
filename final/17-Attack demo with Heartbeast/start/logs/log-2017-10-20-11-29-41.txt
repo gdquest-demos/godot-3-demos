@@ -1,0 +1,8 @@
+OpenGL ES 3.0 Renderer: GeForce GTX 970/PCIe/SSE2
+GLES3: max ubo light: 409
+GLES3: max ubo reflections: 455, ubo size: 144
+WARNING: not found: gdnative/singletons
+Registered interface Native mobile
+SVG_GENERATION TIME: 0.089
+OPENING: D:/Library/Dropbox/Transfer/godot_kickstarter/game/collabs/Attack demo with Heartbeast/end (D:::Library::Dropbox::Transfer::godot_kickstarter::game::collabs::Attack demo with Heartbeast::end)
+running cmdline: "D:\Library\Downloads\Godot-Windows-x86_64-2017-10-16.cc7f224\godot1610.exe" "--path" "D:/Library/Dropbox/Transfer/godot_kickstarter/game/collabs/Attack demo with Heartbeast/end" "--editor"

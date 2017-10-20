@@ -1,0 +1,149 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/weapons/Weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/weapons/spear/spear_enemy.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "_setup"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_deg")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CollisionPolygon2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "attack"
+length = 1.2
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.35, 0.4, 0.45, 0.55, 0.55, 0.6, 0.75, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 5.29456, 1, 1, 1, 1, 2.46314, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -11.0626, 7.31512 ), Vector2( -13.7383, 5.24251 ), Vector2( -14.6302, 2.92606 ), Vector2( -14.6302, 0 ), Vector2( -13.8042, -3.9014 ), Vector2( 103.387, -2.38419e-06 ), Vector2( 98.998, 0 ), Vector2( 91.6829, 0 ), Vector2( 91.6829, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionPolygon2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_deg")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.3, 0.35, 0.4, 0.45, 0.55, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -2.88659, 1.92508, 0.962542, 0.0, -0.896525, 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/keys = {
+"times": PoolRealArray( 0.3, 0.45, 0.55, 0.65 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1.4 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Spear" instance=ExtResource( 1 )]
+
+rotation = 0.0
+
+[node name="AnimationPlayer" parent="."]
+
+anims/_setup = SubResource( 1 )
+anims/attack = SubResource( 2 )
+
+[node name="CollisionPolygon2D" parent="."]
+
+polygon = PoolVector2Array( 33, 0, 54, 17, 98, 0, 55, -17 )
+
+[node name="Sprite" parent="."]
+
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+offset = Vector2( -30, 0 )
+
+
