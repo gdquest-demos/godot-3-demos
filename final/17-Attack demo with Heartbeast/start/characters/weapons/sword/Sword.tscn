@@ -7,10 +7,6 @@
 
 rotation = 0.0
 
-[node name="CollisionPolygon2D" parent="."]
-
-disabled = true
-
 [node name="Sprite" parent="."]
 
 texture = ExtResource( 2 )
