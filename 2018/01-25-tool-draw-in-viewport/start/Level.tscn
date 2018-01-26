@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=1]
+
+[node name="Level" type="Node" index="0"]
+
+[node name="Npc" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 189.382, 384.796 )
+patrol_vector = Vector2( 120, -200 )
+
+[node name="Npc2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 795.515, 348.146 )
+patrol_vector = Vector2( -200, 120 )
+
+

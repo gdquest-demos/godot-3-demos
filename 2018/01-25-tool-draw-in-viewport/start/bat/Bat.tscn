@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://bat/Bat.gd" type="Script" id=1]
+[ext_resource path="res://bat/bat.png" type="Texture" id=2]
+
+[node name="Bat" type="KinematicBody2D" index="0"]
+
+position = Vector2( 138.432, 303.241 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+sine_amplitude = 80
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( -26.6544, -16.3554 )
+texture = ExtResource( 2 )
+
+

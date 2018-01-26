@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/npc/npc.gd" type="Script" id=2]
+
+[node name="Npc" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+patrol_distance = 200
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+
