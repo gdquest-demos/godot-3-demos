@@ -14,7 +14,7 @@ Project organization:
 
 1. [Youtube playlist](https://www.youtube.com/playlist?list=PLhqJJNjsQ7KEr_YlibZ3SBuzfw9xwGduK)
 2. [Tutorial page](http://gdquest.com/tutorial/game-design/godot/30-days-free-game-creation-tutorial/) on GDquest
-3. [Kickstarter page](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) (Please help spread the word!)
+3. [Godot 3 course](https://gumroad.com/gdquest) (Premium)
 
 ## Contributors
 
