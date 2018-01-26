@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 896 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-2158,-1844)">
+        <g id="_2by2-edge-variations" serif:id="2by2-edge-variations" transform="matrix(0.677249,0,0,0.666667,1988.69,1052.67)">
+            <rect x="250" y="1187" width="1323" height="960" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="250" y="1187" width="1323" height="960"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(2.95312,0,0,2.96491,-7212.55,-4249.52)">
+                    <rect x="2559" y="1866" width="256" height="259.03" style="fill:rgb(123,145,158);"/>
+                    <path d="M2815,2125.03L2559,2125.03L2559,1866L2815,1866L2815,2125.03ZM2561,1868.02L2561,2123.01L2813,2123.01L2813,1868.02L2561,1868.02Z" style="fill:rgb(209,217,221);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-4.02843,-347.472)">
+                    <g transform="matrix(1.47656,0,0,1.5,-1427.82,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">1</text>
+                    </g>
+                    <g transform="matrix(1.47656,0,0,1.5,-1243.12,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">2</text>
+                    </g>
+                    <g transform="matrix(1.47656,0,0,1.5,-1051.95,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">3</text>
+                    </g>
+                </g>
+                <g transform="matrix(1,0,0,1,-4.02843,-153.972)">
+                    <g transform="matrix(1.47656,0,0,1.5,-1427.82,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">4</text>
+                    </g>
+                    <g transform="matrix(1.47656,0,0,1.5,-1243.12,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">5</text>
+                    </g>
+                    <g transform="matrix(1.47656,0,0,1.5,-1051.95,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">6</text>
+                    </g>
+                </g>
+                <g transform="matrix(1,0,0,1,-4.02843,38.0283)">
+                    <g transform="matrix(1.47656,0,0,1.5,-1427.82,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">7</text>
+                    </g>
+                    <g transform="matrix(1.47656,0,0,1.5,-1243.12,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">8</text>
+                    </g>
+                    <g transform="matrix(1.47656,0,0,1.5,-1051.95,-897.178)">
+                        <text x="1301px" y="1844px" style="font-family:'SourceCodePro-Medium', 'Source Code Pro', monospace;font-weight:500;font-size:100px;fill:rgb(209,217,221);">9</text>
+                    </g>
+                </g>
+                <g transform="matrix(1.47656,0,0,1.5,-3056.02,-1516)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(1.47656,0,0,1.5,-2961.52,-1420)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(1.47656,0,0,-1.5,-2867.02,4850)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(-1.47656,0,0,-1.5,5729.52,4946)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(-1.47656,0,0,1.5,5635.02,-1324)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(-1.47656,0,0,1.5,5540.52,-1228)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(1.47656,0,0,1.5,-3056.02,-1516)">
+                    <path d="M2879,1802L3135,1802C3135,1802 3135,2058 3135,2058C3135,2058 2879,2058 2879,2058C2879,2058 2879,1802 2879,1802ZM2943,1866L2943,1994L3071,1994L3071,1866L2943,1866Z" style="fill:rgb(123,145,158);"/>
+                    <path d="M3135,1802L3135,2058C3135,2058 2879,2058 2879,2058C2879,2058 2879,1802 2879,1802L3135,1802ZM2883,1806L2883,2054L3131,2054L3131,1806L2883,1806ZM3072.53,1862.3L3073.83,1863.17L3074.7,1864.47L3075,1866L3075,1994L3074.7,1995.53L3073.83,1996.83L3072.53,1997.7L3071,1998L2943,1998L2941.47,1997.7L2940.17,1996.83L2939.3,1995.53L2939,1994L2939,1866L2939.3,1864.47L2940.17,1863.17L2941.47,1862.3L2943,1862L3071,1862L3072.53,1862.3ZM2943,1866L2943,1994L3071,1994L3071,1866L2943,1866Z" style="fill:rgb(209,217,221);"/>
+                </g>
+                <g transform="matrix(1.47656,0,0,-1.5,-2772.52,4754)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+                <g transform="matrix(-1.47656,0,0,-1.5,5824.02,5042)">
+                    <rect x="2879" y="2058" width="64" height="64" style="fill:rgb(123,145,158);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
