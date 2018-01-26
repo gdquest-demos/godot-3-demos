@@ -2,6 +2,7 @@ ref/
 tutorial/
 tools/
 bad/
+logs/
 
 assets/icon/
 *.psd
