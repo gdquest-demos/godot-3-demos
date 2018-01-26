@@ -22,11 +22,11 @@ size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 78.0
 margin/top = 110.0
-margin/right = 270.0
-margin/bottom = 302.0
+margin/right = 206.0
+margin/bottom = 238.0
 texture = ExtResource( 1 )
 expand = true
-stretch_mode = 2
+stretch_mode = 0
 
 [node name="TextureButton" type="TextureButton" parent="."]
 
@@ -126,5 +126,17 @@ patch_margin/left = 20
 patch_margin/top = 20
 patch_margin/right = 20
 patch_margin/bottom = 20
+
+[node name="TextureFrame 2" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+stretch_mode = 0
 
 
