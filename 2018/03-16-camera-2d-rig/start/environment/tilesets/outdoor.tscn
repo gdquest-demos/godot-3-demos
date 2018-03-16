@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://environment/tilesets/outdoor.png" type="Texture" id=1]
+
+
+[node name="Outdoor" type="Node" index="0"]
+
+[node name="dirt" type="Sprite" parent="." index="0"]
+
+position = Vector2( 832, 256 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 0, 640, 512 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass" type="Sprite" parent="." index="1"]
+
+position = Vector2( 320, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 384, 256 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock" type="Sprite" parent="." index="2"]
+
+position = Vector2( 64, 192 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 384, 128, 128 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rock" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rock/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -48, -48, 32, -48, 32, 0, 48, 0, 48, 48, 16, 48, 16, 16, -48, 16 )
+
+
