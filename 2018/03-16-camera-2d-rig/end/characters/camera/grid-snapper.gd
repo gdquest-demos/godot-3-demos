@@ -6,7 +6,10 @@ var grid_size = Vector2()
 onready var parent = get_parent()
 
 func _ready():
-	grid_size = OS.window_size
+	# If you drag the camera from the OffsetPivot node,
+	# its position will not be (0, 0)
+	$Camera2D.position = Vector2()
+	grid_size = OS.get_screen_size()
 	set_as_toplevel(true)
 	update_grid_position()
 
@@ -20,8 +23,6 @@ func update_grid_position():
 	if grid_position == new_grid_position:
 		return
 	grid_position = new_grid_position
-	print(new_grid_position)
-	print(parent.position / grid_size)
 	jump_to_grid_position()
 
 
