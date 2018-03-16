@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://characters/player.gd" type="Script" id=1]
 [ext_resource path="res://characters/body.png" type="Texture" id=2]
 [ext_resource path="res://characters/shadow.png" type="Texture" id=3]
-[ext_resource path="res://grid-snapping.gd" type="Script" id=4]
+[ext_resource path="res://characters/camera/grid-snapper.gd" type="Script" id=4]
+[ext_resource path="res://characters/camera/camera-pivot.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -219,12 +220,13 @@ position = Vector2( -0.32052, -4.20115 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Position2D" type="Position2D" parent="." index="5"]
+[node name="GridSnapper" type="Position2D" parent="." index="5"]
 
 script = ExtResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="Position2D" index="0"]
+[node name="Camera2D" type="Camera2D" parent="GridSnapper" index="0"]
 
+position = Vector2( 254.848, 0 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -248,5 +250,13 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = true
 _sections_unfolded = [ "Drag Margin", "Editor", "Smoothing" ]
+
+[node name="Pivot" type="Position2D" parent="." index="6"]
+
+script = ExtResource( 5 )
+
+[node name="OffsetPivot" type="Position2D" parent="Pivot" index="0"]
+
+position = Vector2( 254.848, 0 )
 
 
