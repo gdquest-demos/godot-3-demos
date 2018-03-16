@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/outdor.png" type="Texture" id=1]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="dirt-2by2" type="Sprite" parent="." index="0"]
+
+position = Vector2( 320, 256 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 0, 640, 512 )
+_sections_unfolded = [ "Region" ]
+
+[node name="bushes-3by3" type="Sprite" parent="." index="1"]
+
+position = Vector2( 1184, 192 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 512, 1024, 384 )
+_sections_unfolded = [ "Region" ]
+
+
