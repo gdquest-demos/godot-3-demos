@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://characters/player.gd" type="Script" id=1]
 [ext_resource path="res://characters/body.png" type="Texture" id=2]
 [ext_resource path="res://characters/shadow.png" type="Texture" id=3]
 [ext_resource path="res://characters/camera/grid-snapper.gd" type="Script" id=4]
 [ext_resource path="res://characters/camera/camera-pivot.gd" type="Script" id=5]
+[ext_resource path="res://characters/camera/offset-pivot-draw.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -258,5 +259,8 @@ script = ExtResource( 5 )
 [node name="OffsetPivot" type="Position2D" parent="Pivot" index="0"]
 
 position = Vector2( 254.848, 0 )
+script = ExtResource( 6 )
+LINE_LENGTH = 40
+LINE_COLOR_HEX = "#FFEB3B"
 
 
