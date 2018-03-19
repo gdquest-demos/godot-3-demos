@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://characters/player.gd" type="Script" id=1]
 [ext_resource path="res://characters/body.png" type="Texture" id=2]
 [ext_resource path="res://characters/shadow.png" type="Texture" id=3]
-[ext_resource path="res://grid-snapping.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -218,35 +217,5 @@ show_behind_parent = true
 position = Vector2( -0.32052, -4.20115 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
-
-[node name="Position2D" type="Position2D" parent="." index="5"]
-
-script = ExtResource( 4 )
-
-[node name="Camera2D" type="Camera2D" parent="Position2D" index="0"]
-
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = false
-drag_margin_v_enabled = false
-smoothing_enabled = true
-smoothing_speed = 4.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.5
-drag_margin_top = 0.4
-drag_margin_right = 0.5
-drag_margin_bottom = 0.4
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = true
-_sections_unfolded = [ "Drag Margin", "Editor", "Smoothing" ]
 
 
