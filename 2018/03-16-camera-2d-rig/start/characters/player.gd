@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var look_direction = Vector2()
+
 const MAX_WALK_SPEED = 450
 const MAX_RUN_SPEED = 700
 
@@ -41,6 +43,9 @@ func get_input_direction():
 
 
 func update_look_direction(input_direction):
+	if not input_direction:
+		return
+	look_direction = input_direction
 	if not input_direction.x in [-1, 1]:
 		return
 	$BodyPivot.set_scale(Vector2(input_direction.x, 1))

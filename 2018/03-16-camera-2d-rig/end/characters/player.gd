@@ -43,7 +43,7 @@ func get_input_direction():
 
 
 func update_look_direction(input_direction):
-	if input_direction and look_direction != input_direction:
+	if input_direction:
 		look_direction = input_direction
 	if not input_direction.x in [-1, 1]:
 		return
