@@ -18,6 +18,9 @@ func _ready():
 func _change_state(new_state):
 	if new_state == FOLLOW:
 		path = get_parent().get_node('TileMap').get_path(position, target_position)
+		if not path:
+			_change_state(IDLE)
+			return
 		target_point_world = path[0]
 	_state = new_state
 
