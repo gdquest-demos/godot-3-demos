@@ -33,7 +33,7 @@ func _ready():
 #		self.path_start_position = world_to_map(get_global_mouse_position())
 #	elif event.is_action_pressed('click'):
 #		self.path_end_position = world_to_map(get_global_mouse_position())
-		
+
 
 # Loops through all cells within the map's bounds and
 # adds all points to the astar_node, except the obstacles
@@ -119,7 +119,7 @@ func get_path(world_start, world_end):
 		var point_world = map_to_world(Vector2(point.x, point.y)) + _half_cell_size
 		path_world.append(point_world)
 	return path_world
-	
+
 
 func _recalculate_path():
 	clear_previous_path_drawing()

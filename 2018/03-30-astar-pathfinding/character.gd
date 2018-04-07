@@ -21,7 +21,9 @@ func _change_state(new_state):
 		if not path:
 			_change_state(IDLE)
 			return
-		target_point_world = path[0]
+		# The index 0 is the starting cell
+		# we don't want the character to move back to it in this example
+		target_point_world = path[1]
 	_state = new_state
 
 
@@ -40,7 +42,7 @@ func _process(delta):
 func move_to(world_position):
 	var MASS = 10.0
 	var ARRIVE_DISTANCE = 10.0
-	
+
 	var desired_velocity = (world_position - position).normalized() * SPEED
 	var steering = desired_velocity - velocity
 	velocity += steering / MASS
