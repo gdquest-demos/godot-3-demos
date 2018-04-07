@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/player/player.gd" type="Script" id=2]
+[ext_resource path="res://characters/player/body.png" type="Texture" id=3]
+[ext_resource path="res://characters/debug/direction/DirectionVisualizer.tscn" type="PackedScene" id=4]
+
+[node name="Player" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Z Index" ]
+weapon_scene_path = "res://characters/weapon/Sword.tscn"
+
+[node name="Body" parent="BodyPivot" index="0"]
+
+texture = ExtResource( 3 )
+
+[node name="DirectionVisualizer" parent="." index="7" instance=ExtResource( 4 )]
+
+show_behind_parent = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=2]
+
+[node name="Demo" type="Node" index="0"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 634.68, 403.075 )
+
+[node name="Dummy" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 832, 400 )
+
+[node name="Dummy2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 784, 256 )
+
+[node name="Dummy3" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 640, 208 )
+
+[node name="Dummy4" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 496, 256 )
+
+[node name="Dummy5" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 448, 400 )
+
+[node name="Dummy6" parent="." index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 496, 544 )
+
+[node name="Dummy7" parent="." index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 640, 592 )
+
+[node name="Dummy8" parent="." index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 784, 544 )
+
+

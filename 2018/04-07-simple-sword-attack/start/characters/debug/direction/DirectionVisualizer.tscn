@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/debug/direction/direction-visualizer.gd" type="Script" id=1]
+[ext_resource path="res://characters/debug/direction/arrow.png" type="Texture" id=2]
+
+
+[node name="DirectionVisualizer" type="Position2D"]
+
+script = ExtResource( 1 )
+scale_range = Vector2( 0.5, 1 )
+
+[node name="Arrow" type="Sprite" parent="." index="0"]
+
+position = Vector2( 56.0362, -0.163977 )
+texture = ExtResource( 2 )
+offset = Vector2( 33.8244, -0.589883 )
+
+[node name="Tween" type="Tween" parent="." index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+

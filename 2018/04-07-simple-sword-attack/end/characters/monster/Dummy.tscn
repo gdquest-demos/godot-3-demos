@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/monster/dummy.png" type="Texture" id=2]
+
+[node name="Dummy" index="0" instance=ExtResource( 1 )]
+
+stagger_knockback = 15
+
+[node name="Health" parent="." index="2"]
+
+max_health = 5
+
+[node name="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( -1, -51.8946 )
+
+[node name="Body" parent="BodyPivot" index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="Shadow" parent="." index="6"]
+
+position = Vector2( -0.32052, 0.328315 )
+
+
