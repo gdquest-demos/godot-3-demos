@@ -1,6 +1,19 @@
-# 2018 Godot demos
+# 2018 Godot 3 demos
 
 All of these demos work in Godot 3.
+
+## Finite State Machine - 04/24/2018
+
+Sample source code from the [Godot 3 course](https://gumroad.com/l/godot-tutorial-make-professional-2d-games) on Gumroad. It shows how to implement the State pattern in GDScript, including Hierarchical States and a pushdown automaton.
+
+States are common in games. You can use the pattern to:
+
+1. Separate each behavior and transitions between behaviors, thus make scripts shorter and easier to manage
+2. Respect the Single Responsibility Principle. Each State object represents one action
+3. Improve your code's structure. Look at the scene tree and FileSystem tab: without looking at the code, you'll know what the Player can or cannot do.
+
+You can read more about States in the excellent [ Game Programming Patterns ](http://gameprogrammingpatterns.com/state.html) ebook.
+
 
 ## Astar pathfinding - 03/30/2018
 
