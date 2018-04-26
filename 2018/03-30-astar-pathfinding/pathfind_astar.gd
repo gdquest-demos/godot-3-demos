@@ -82,7 +82,8 @@ func astar_connect_walkable_cells(points_array):
 			# Note the 3rd argument. It tells the astar_node that we want the
 			# connection to be bilateral: from point A to B and B to A
 			# If you set this value to false, it becomes a one-way path
-			astar_node.connect_points(point_index, point_relative_index, true)
+			# As we loop through all points we can set it to false
+			astar_node.connect_points(point_index, point_relative_index, false)
 
 
 # This is a variation of the method above
