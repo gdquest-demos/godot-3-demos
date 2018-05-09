@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/EnemySpawner.gd" type="Script" id=1]
+
+
+[node name="Spawner" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+direction = null
+MINIMUM_SPAWN_INTERVAL = 1.5
+MAXIMUM_SPAWN_INTERVAL = 3
+
+[node name="SpawnInterval" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 2.5
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="SpawnInterval" to="." method="_on_SpawnInterval_timeout"]
+
+

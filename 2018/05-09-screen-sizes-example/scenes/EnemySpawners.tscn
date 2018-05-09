@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/EnemySpawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/EnemySpawner.gd" type="Script" id=2]
+
+
+[node name="EnemySpawners" type="Node2D"]
+
+editor/display_folded = true
+
+[node name="SpawnerLeft" type="Node2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -143, 148 )
+script = ExtResource( 2 )
+direction = 2
+MINIMUM_SPAWN_INTERVAL = 1.5
+MAXIMUM_SPAWN_INTERVAL = 3
+
+[node name="SpawnerTop" type="Node2D" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 168, -153 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+direction = 0
+MINIMUM_SPAWN_INTERVAL = 1.5
+MAXIMUM_SPAWN_INTERVAL = 3
+
+[node name="SpawnerRight" type="Node2D" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 818, 321 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+direction = 3
+MINIMUM_SPAWN_INTERVAL = 1.5
+MAXIMUM_SPAWN_INTERVAL = 3
+
+[node name="SpawnerBottom" type="Node2D" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 479, 674 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+direction = 1
+MINIMUM_SPAWN_INTERVAL = 1.5
+MAXIMUM_SPAWN_INTERVAL = 3
+
+

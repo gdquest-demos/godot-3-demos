@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://sprites/roguelikeChar_transparent.png" type="Texture" id=2]
+
+[node name="Player" type="KinematicBody2D" index="0"]
+
+scale = Vector2( 5, 5 )
+z_index = 1
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+SPEED = 150
+
+[node name="Pivot" type="Position2D" parent="." index="0"]
+
+[node name="Body" type="Sprite" parent="Pivot" index="0"]
+
+position = Vector2( -9.53674e-07, -7 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 2, 16, 14 )
+
+[node name="Helmet" type="Sprite" parent="Pivot" index="1"]
+
+position = Vector2( -9.53674e-07, -12 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 480, 0, 10, 8 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Pants" type="Sprite" parent="Pivot" index="2"]
+
+position = Vector2( -9.53674e-07, -1 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 55, 47, 10, 3 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Armor" type="Sprite" parent="Pivot" index="3"]
+
+position = Vector2( -9.53674e-07, -5 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 290, 91, 16, 9 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Shield" type="Sprite" parent="Pivot" index="4"]
+
+position = Vector2( -7, -4 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 585, 23, 10, 9 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Weapon" type="Sprite" parent="Pivot" index="5"]
+
+position = Vector2( 7, -4 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 834, 20, 6, 9 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+show_behind_parent = true
+position = Vector2( 0, -8 )
+scale = Vector2( 1, 1 )
+build_mode = 0
+polygon = PoolVector2Array( -6, 8, -6, -2, 6, -2, 6, 8 )
+_sections_unfolded = [ "Visibility" ]
+
+

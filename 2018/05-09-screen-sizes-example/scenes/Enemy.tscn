@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://sprites/roguelikeChar_transparent.png" type="Texture" id=2]
+
+[node name="Enemy" type="Node2D"]
+
+scale = Vector2( 5, 5 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Body" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 53, 16, 14 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Pants" type="Sprite" parent="." index="1"]
+
+position = Vector2( 0, 5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 55, 148, 10, 5 )
+_sections_unfolded = [ "Region" ]
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+
+

@@ -1,0 +1,36 @@
+[gd_scene format=2]
+
+[node name="Walls" type="StaticBody2D"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="TopWall" type="CollisionPolygon2D" parent="." index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20, 0, 660, 0, 660, -20, -20, -20 )
+
+[node name="LeftWall" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20, 500, 0, 500, 0, -20, -20, -20 )
+
+[node name="BottomWall" type="CollisionPolygon2D" parent="." index="2"]
+
+position = Vector2( 0, 510 )
+build_mode = 0
+polygon = PoolVector2Array( -20, -10, 660, -10, 660, -30, -20, -30 )
+
+[node name="RightWall" type="CollisionPolygon2D" parent="." index="3"]
+
+position = Vector2( 0, 510 )
+build_mode = 0
+polygon = PoolVector2Array( 640, -530, 640, -10, 660, -10, 660, -530 )
+
+

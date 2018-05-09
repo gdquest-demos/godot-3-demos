@@ -1,0 +1,178 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Interface/InputButtons.gd" type="Script" id=1]
+
+[node name="MouseButtons" type="Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="VerticalContainer" type="VBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 130.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 20
+alignment = 0
+_sections_unfolded = [ "Rect", "custom_constants" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MoveUp" type="Button" parent="VerticalContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 120.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Up"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Rect" ]
+
+[node name="MoveDown" type="Button" parent="VerticalContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 80.0
+margin_right = 120.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Down"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="HorizontalContainer" type="HBoxContainer" parent="." index="1"]
+
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -270.0
+margin_top = 50.0
+margin_right = -10.0
+margin_bottom = -50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 20
+alignment = 0
+_sections_unfolded = [ "Rect", "custom_constants" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MoveLeft" type="Button" parent="HorizontalContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 120.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "< Left"
+flat = false
+align = 1
+
+[node name="MoveRight" type="Button" parent="HorizontalContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_right = 260.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Right >"
+flat = false
+align = 1
+
+[connection signal="button_down" from="VerticalContainer/MoveUp" to="." method="_on_MoveUp_button_down"]
+
+[connection signal="button_up" from="VerticalContainer/MoveUp" to="." method="_on_MoveUp_button_up"]
+
+[connection signal="button_down" from="VerticalContainer/MoveDown" to="." method="_on_MoveDown_button_down"]
+
+[connection signal="button_up" from="VerticalContainer/MoveDown" to="." method="_on_MoveDown_button_up"]
+
+[connection signal="button_down" from="HorizontalContainer/MoveLeft" to="." method="_on_MoveLeft_button_down"]
+
+[connection signal="button_up" from="HorizontalContainer/MoveLeft" to="." method="_on_MoveLeft_button_up"]
+
+[connection signal="button_down" from="HorizontalContainer/MoveRight" to="." method="_on_MoveRight_button_down"]
+
+[connection signal="button_up" from="HorizontalContainer/MoveRight" to="." method="_on_MoveRight_button_up"]
+
+
