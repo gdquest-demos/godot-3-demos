@@ -1,0 +1,138 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://interface/bar/Bar.gd" type="Script" id=1]
+[ext_resource path="res://interface/counter/label_bg.png" type="Texture" id=2]
+[ext_resource path="res://interface/bar/life_bar/label_HP.png" type="Texture" id=3]
+[ext_resource path="res://interface/theme/default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://interface/bar/life_bar/bg.png" type="Texture" id=5]
+[ext_resource path="res://interface/bar/life_bar/fill.png" type="Texture" id=6]
+
+[node name="Bar" type="HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 500.0
+margin_bottom = 53.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 1 )
+current_value = 12
+minimum_value = 0
+maximum_value = 34
+
+[node name="Count" type="MarginContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 140.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 140, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_left = 0
+_sections_unfolded = [ "Rect", "Size Flags", "custom_constants" ]
+
+[node name="Background" type="NinePatchRect" parent="Count" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 140.0
+margin_bottom = 53.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Title" type="TextureRect" parent="Count/Background" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_top = -20.5
+margin_right = 49.0
+margin_bottom = 19.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="Number" type="Label" parent="Count/Background" index="1"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = -20.5
+margin_right = -8.0
+margin_bottom = 19.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 4 )
+text = "12/34"
+align = 2
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="TextureProgress" type="TextureProgress" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 144.0
+margin_right = 540.0
+margin_bottom = 53.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 34.0
+step = 1.0
+page = 0.0
+value = 12.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 5 )
+texture_over = null
+texture_progress = ExtResource( 6 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Textures" ]
+
+

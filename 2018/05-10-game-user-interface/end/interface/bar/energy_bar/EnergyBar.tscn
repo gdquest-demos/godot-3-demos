@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://interface/bar/Bar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://interface/bar/energy_bar/label_EP.png" type="Texture" id=2]
+[ext_resource path="res://interface/bar/energy_bar/number_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://interface/bar/energy_bar/bg.png" type="Texture" id=4]
+[ext_resource path="res://interface/bar/energy_bar/fill.png" type="Texture" id=5]
+
+[node name="EnergyBar" index="0" instance=ExtResource( 1 )]
+
+margin_right = 352.0
+margin_bottom = 40.0
+_sections_unfolded = [ "Rect", "Theme" ]
+current_value = 4
+maximum_value = 12
+
+[node name="Count" parent="." index="0"]
+
+margin_right = 110.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 110, 40 )
+
+[node name="Background" parent="Count" index="0"]
+
+margin_right = 110.0
+margin_bottom = 40.0
+
+[node name="Title" parent="Count/Background" index="0"]
+
+margin_top = -20.0
+margin_bottom = 20.0
+texture = ExtResource( 2 )
+
+[node name="Number" parent="Count/Background" index="1"]
+
+margin_top = -20.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 3 )
+text = "4/12"
+_sections_unfolded = [ "Theme", "custom_fonts" ]
+
+[node name="TextureProgress" parent="." index="1"]
+
+margin_left = 114.0
+margin_right = 362.0
+margin_bottom = 40.0
+max_value = 12.0
+value = 4.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+
+
