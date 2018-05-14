@@ -6,13 +6,13 @@
 [ext_resource path="res://interface/bar/energy_bar/bg.png" type="Texture" id=4]
 [ext_resource path="res://interface/bar/energy_bar/fill.png" type="Texture" id=5]
 
-[node name="EnergyBar" index="0" instance=ExtResource( 1 )]
+[node name="EnergyBar" instance=ExtResource( 1 )]
 
 margin_right = 352.0
 margin_bottom = 40.0
 _sections_unfolded = [ "Rect", "Theme" ]
-current_value = 4
 maximum_value = 12
+current_value = 4
 
 [node name="Count" parent="." index="0"]
 
