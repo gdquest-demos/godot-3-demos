@@ -11,16 +11,26 @@
 
 [node name="GUI" parent="." index="0" instance=ExtResource( 1 )]
 
+anchor_bottom = 1.0
+margin_bottom = 0.0
+
 [node name="Background" type="Sprite" parent="." index="1"]
 
 position = Vector2( 684, 383 )
 z_index = -1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Characters" type="YSort" parent="." index="2"]
 
+editor/display_folded = true
 sort_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Green" type="Sprite" parent="Characters" index="0"]
 

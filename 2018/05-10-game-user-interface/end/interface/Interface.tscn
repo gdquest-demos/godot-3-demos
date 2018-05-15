@@ -5,7 +5,7 @@
 [ext_resource path="res://interface/counter/bombs/BombCounter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://interface/counter/rupees/RupeeCounter.tscn" type="PackedScene" id=4]
 
-[node name="Interface" type="Control"]
+[node name="Interface" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -54,13 +54,13 @@ _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 [node name="Counters" type="HBoxContainer" parent="." index="1"]
 
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 0.0
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 0.0
 margin_left = -240.0
-margin_top = -42.5
+margin_top = 33.0
 margin_right = -30.0
-margin_bottom = 41.5
+margin_bottom = 117.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
