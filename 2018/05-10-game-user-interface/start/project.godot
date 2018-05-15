@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Responsive UI Design (end)"
+config/name="Responsive UI Design (start)"
 run/main_scene="res://LevelMockup.tscn"
 config/icon="res://icon.png"
 

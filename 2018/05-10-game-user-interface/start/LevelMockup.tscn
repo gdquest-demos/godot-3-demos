@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://background/bg.png" type="Texture" id=1]
+[ext_resource path="res://characters/buddy_green.png" type="Texture" id=2]
+[ext_resource path="res://characters/shadow.png" type="Texture" id=3]
+[ext_resource path="res://characters/buddy_orange.png" type="Texture" id=4]
+[ext_resource path="res://characters/foe_pink.png" type="Texture" id=5]
+
+[node name="Game" type="Node" index="0"]
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 684, 383 )
+z_index = -1
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Characters" type="YSort" parent="." index="1"]
+
+editor/display_folded = true
+sort_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Green" type="Sprite" parent="Characters" index="0"]
+
+position = Vector2( 306.117, 532.928 )
+texture = ExtResource( 2 )
+
+[node name="shadow" type="Sprite" parent="Characters/Green" index="0"]
+
+show_behind_parent = true
+position = Vector2( 3, 63 )
+texture = ExtResource( 3 )
+
+[node name="Orange" type="Sprite" parent="Characters" index="1"]
+
+position = Vector2( 500.676, 389.37 )
+texture = ExtResource( 4 )
+
+[node name="shadow" type="Sprite" parent="Characters/Orange" index="0"]
+
+show_behind_parent = true
+position = Vector2( 0, 62 )
+texture = ExtResource( 3 )
+
+[node name="Pink" type="Sprite" parent="Characters" index="2"]
+
+position = Vector2( 995.54, 422.694 )
+texture = ExtResource( 5 )
+
+[node name="shadow" type="Sprite" parent="Characters/Pink" index="0"]
+
+show_behind_parent = true
+position = Vector2( 1, 122 )
+texture = ExtResource( 3 )
+
+
