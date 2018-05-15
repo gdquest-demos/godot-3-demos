@@ -5,7 +5,7 @@
 [ext_resource path="res://interface/counter/bombs/BombCounter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://interface/counter/rupees/RupeeCounter.tscn" type="PackedScene" id=4]
 
-[node name="Interface" type="Control" index="0"]
+[node name="Interface" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -76,26 +76,20 @@ __meta__ = {
 
 [node name="BombCounter" parent="Counters" index="0" instance=ExtResource( 3 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 100.0
 margin_bottom = 84.0
 rect_min_size = Vector2( 100, 40 )
+mouse_filter = 0
+custom_constants/margin_left = 0
+_sections_unfolded = [ "Rect", "Size Flags", "custom_constants" ]
 
 [node name="RupeeCounter" parent="Counters" index="1" instance=ExtResource( 4 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 110.0
-margin_top = 0.0
 margin_right = 210.0
 margin_bottom = 84.0
 rect_min_size = Vector2( 100, 40 )
+mouse_filter = 0
+custom_constants/margin_left = 0
+_sections_unfolded = [ "Rect", "Size Flags", "custom_constants" ]
 
 
