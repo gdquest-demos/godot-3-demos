@@ -1,0 +1,285 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://ui/interface/panel.png" type="Texture" id=1]
+[ext_resource path="res://ui/fonts/montserrat_eb_42.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ui/interface/stats/Attack.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/interface/stats/Defense.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/interface/left.png" type="Texture" id=5]
+[ext_resource path="res://ui/interface/left_pressed.png" type="Texture" id=6]
+[ext_resource path="res://characters/green.png" type="Texture" id=7]
+[ext_resource path="res://ui/interface/right.png" type="Texture" id=8]
+[ext_resource path="res://ui/interface/right_pressed.png" type="Texture" id=9]
+[ext_resource path="res://ui/interface/stats/select.png" type="Texture" id=10]
+[ext_resource path="res://ui/interface/stats/select_pressed.png" type="Texture" id=11]
+
+[node name="GUI" type="HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="StatsMenu" type="MarginContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 600.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 600, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+_sections_unfolded = [ "Margin", "Rect", "custom_constants" ]
+
+[node name="Background" type="NinePatchRect" parent="StatsMenu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 580.0
+margin_bottom = 580.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="StatsMenu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 580.0
+margin_bottom = 580.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 25
+custom_constants/margin_top = 18
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsMenu/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 30.0
+margin_top = 18.0
+margin_right = 535.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Title" type="Label" parent="StatsMenu/MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 505.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 1, 0.596078, 0, 1 )
+custom_constants/shadow_offset_y = 2
+text = "Select Character"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="Attack" parent="StatsMenu/MarginContainer/VBoxContainer" index="1" instance=ExtResource( 3 )]
+
+margin_top = 84.0
+margin_right = 505.0
+margin_bottom = 216.0
+
+[node name="Defense" parent="StatsMenu/MarginContainer/VBoxContainer" index="2" instance=ExtResource( 4 )]
+
+margin_top = 220.0
+margin_right = 505.0
+margin_bottom = 352.0
+
+[node name="CharacterSelector" type="VBoxContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 604.0
+margin_right = 1004.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 400, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 40
+alignment = 1
+_sections_unfolded = [ "Margin", "Rect", "custom_constants" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharacterSelector" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 144.0
+margin_right = 400.0
+margin_bottom = 288.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 30
+alignment = 1
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Previous" type="TextureButton" parent="CharacterSelector/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 39.0
+margin_right = 139.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 100, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="SelectedCharacter" type="TextureRect" parent="CharacterSelector/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_right = 230.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 6
+_sections_unfolded = [ "Grow Direction", "Rect" ]
+
+[node name="Next" type="TextureButton" parent="CharacterSelector/HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 260.0
+margin_right = 360.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 100, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Hint", "Size Flags", "Textures" ]
+
+[node name="Select" type="TextureButton" parent="CharacterSelector" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 328.0
+margin_right = 400.0
+margin_bottom = 456.0
+rect_min_size = Vector2( 256, 128 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect", "Textures" ]
+
+

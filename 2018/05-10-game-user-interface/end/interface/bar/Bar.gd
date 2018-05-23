@@ -1,4 +1,3 @@
-tool
 extends HBoxContainer
 
 export(int) var current_value = 12 setget set_current_value
