@@ -5,12 +5,12 @@
 
 [node name="RupeeCounter" index="0" instance=ExtResource( 1 )]
 
-[node name="Icon" parent="Background" index="1"]
+[node name="Icon" parent="." index="1"]
 
-margin_left = -66.0
-margin_top = -44.0
-margin_right = 14.0
-margin_bottom = 36.0
+margin_left = -67.0
+margin_top = -41.0
+margin_right = 13.0
+margin_bottom = 39.0
 texture = ExtResource( 2 )
 
 

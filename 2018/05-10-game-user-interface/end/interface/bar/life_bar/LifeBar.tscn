@@ -4,4 +4,6 @@
 
 [node name="LifeBar" index="0" instance=ExtResource( 1 )]
 
+margin_right = 540.0
+
 

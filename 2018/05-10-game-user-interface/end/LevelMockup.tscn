@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=1]
 [ext_resource path="res://background/bg.png" type="Texture" id=2]
@@ -6,10 +6,14 @@
 [ext_resource path="res://characters/shadow.png" type="Texture" id=4]
 [ext_resource path="res://characters/buddy_orange.png" type="Texture" id=5]
 [ext_resource path="res://characters/foe_pink.png" type="Texture" id=6]
+[ext_resource path="res://interface/theme/font/comfortaa_tips.tres" type="DynamicFont" id=7]
 
 [node name="Game" type="Node" index="0"]
 
 [node name="GUI" parent="." index="0" instance=ExtResource( 1 )]
+
+anchor_bottom = 1.0
+margin_bottom = 0.0
 
 [node name="Background" type="Sprite" parent="." index="1"]
 
@@ -17,10 +21,17 @@ position = Vector2( 684, 383 )
 z_index = -1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Characters" type="YSort" parent="." index="2"]
 
+editor/display_folded = true
 sort_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Green" type="Sprite" parent="Characters" index="0"]
 
@@ -54,5 +65,38 @@ texture = ExtResource( 6 )
 show_behind_parent = true
 position = Vector2( 1, 122 )
 texture = ExtResource( 4 )
+
+[node name="Tips" type="Label" parent="." index="3"]
+
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -663.0
+margin_top = -340.0
+margin_right = 667.0
+margin_bottom = -24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Game Interfaces are rarely responsive in the sense of web pages or some mobile applications.
+
+As most games have a fixed base resolution and orientation you rarely need the layout to adapt to radically different screen ratios.
+The viewport will generally first scale so its shorter edge fits the shorter edge of the screen, then expand the camera's bounds on the longer edge.
+
+That's why it's generally enough to have UI elements that anchor to corners of the screen and that don't scale with it.
+Another reason is that porting from desktop to mobile may involve redesigning the input and UX of your game entirely, in which case it's not worth trying to handle everything with one UI system from the start."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 

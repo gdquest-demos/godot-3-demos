@@ -23,36 +23,19 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 script = ExtResource( 1 )
-current_value = 12
 minimum_value = 0
 maximum_value = 34
+current_value = 12
 
-[node name="Count" type="MarginContainer" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 140.0
-margin_bottom = 53.0
-rect_min_size = Vector2( 140, 40 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_constants/margin_left = 0
-_sections_unfolded = [ "Rect", "Size Flags", "custom_constants" ]
-
-[node name="Background" type="NinePatchRect" parent="Count" index="0"]
+[node name="Count" type="NinePatchRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 53.0
+rect_min_size = Vector2( 150, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -62,7 +45,7 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="Title" type="TextureRect" parent="Count/Background" index="0"]
+[node name="Title" type="TextureRect" parent="Count" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.5
@@ -80,7 +63,7 @@ size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 4
 
-[node name="Number" type="Label" parent="Count/Background" index="1"]
+[node name="Number" type="Label" parent="Count" index="1"]
 
 anchor_left = 1.0
 anchor_top = 0.5
@@ -111,8 +94,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 144.0
-margin_right = 540.0
+margin_left = 154.0
+margin_right = 550.0
 margin_bottom = 53.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
