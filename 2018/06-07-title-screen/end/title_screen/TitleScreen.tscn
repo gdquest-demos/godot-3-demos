@@ -1,0 +1,182 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://title_screen/title_screen.gd" type="Script" id=1]
+[ext_resource path="res://title_screen/logo.png" type="Texture" id=2]
+[ext_resource path="res://title_screen/buttons/NewGameButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://title_screen/buttons/ContinueButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://title_screen/buttons/OptionsButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://title_screen/characters.png" type="Texture" id=6]
+[ext_resource path="res://title_screen/fonts/montserrat_eb_24.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=8]
+
+[node name="TitleScreen" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="Menu" type="VBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1160.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 20
+alignment = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Logo" type="TextureRect" parent="Menu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1040.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 4
+_sections_unfolded = [ "Rect" ]
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 148.0
+margin_right = 1040.0
+margin_bottom = 468.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 518.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+_sections_unfolded = [ "Margin", "custom_constants" ]
+
+[node name="NewGameButton" parent="Menu/CenterRow/Buttons" index="0" instance=ExtResource( 3 )]
+
+margin_top = 50.0
+margin_right = 518.0
+margin_bottom = 110.0
+
+[node name="ContinueButton" parent="Menu/CenterRow/Buttons" index="1" instance=ExtResource( 4 )]
+
+margin_top = 130.0
+margin_right = 518.0
+margin_bottom = 190.0
+
+[node name="OptionsButton" parent="Menu/CenterRow/Buttons" index="2" instance=ExtResource( 5 )]
+
+margin_top = 210.0
+margin_right = 518.0
+margin_bottom = 270.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 522.0
+margin_right = 1040.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Characters" type="TextureRect" parent="Menu/CenterRow/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 99.0
+margin_right = 419.0
+margin_bottom = 320.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="VersionLabel" type="Label" parent="Menu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 495.0
+margin_right = 1040.0
+margin_bottom = 560.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 10
+size_flags_stretch_ratio = 1.01
+custom_fonts/font = ExtResource( 7 )
+text = "Version 1.2.4
+GDQuest Studios"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Size Flags", "custom_fonts" ]
+
+[node name="FadeIn" parent="." index="1" instance=ExtResource( 8 )]
+
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+
+
