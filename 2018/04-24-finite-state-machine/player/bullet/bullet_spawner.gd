@@ -1,6 +1,6 @@
 extends Node2D
 
-var bullet = preload("res://bullet/Bullet.tscn")
+var bullet = preload("Bullet.tscn")
 
 func fire(direction):
 	if not $CooldownTimer.is_stopped():

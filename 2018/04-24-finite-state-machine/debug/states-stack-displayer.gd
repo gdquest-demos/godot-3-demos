@@ -15,3 +15,4 @@ func _on_Player_state_changed(states_stack):
 
 	$States.text = states_names
 	$Numbers.text = numbers
+

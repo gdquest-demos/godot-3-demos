@@ -1,4 +1,4 @@
-extends '../motion.gd'
+extends "../motion.gd"
 
 export(float) var BASE_MAX_HORIZONTAL_SPEED = 400.0
 
@@ -35,7 +35,7 @@ func enter(host):
 	horizontal_velocity = enter_velocity if input_direction else Vector2()
 	vertical_speed = 600.0
 
-	host.get_node('AnimationPlayer').play('idle')
+	host.get_node("AnimationPlayer").play("idle")
 
 
 func update(host, delta):
@@ -45,7 +45,7 @@ func update(host, delta):
 	move_horizontally(host, delta, input_direction)
 	animate_jump_height(host, delta)
 	if height <= 0.0:
-		return 'previous'
+		emit_signal("finished", "previous")
 
 
 func move_horizontally(host, delta, direction):

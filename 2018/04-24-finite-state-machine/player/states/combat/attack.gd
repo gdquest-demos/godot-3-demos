@@ -5,12 +5,10 @@ it could stack with other animations if we had two AnimationPlayer nodes
 """
 extends "../state.gd"
 
-var knockback_direction = Vector2()
 
 func enter(host):
-	host.get_node("AnimationPlayer").play("stagger")
+	host.get_node("AnimationPlayer").play("idle")
 
 
-func _on_animation_finished(anim_name):
-	assert anim_name == "stagger"
+func _on_Sword_attack_finished():
 	emit_signal("finished", "previous")

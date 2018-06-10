@@ -5,6 +5,7 @@ and makes sure every State object had all of these methods.
 """
 extends Node
 
+signal finished(next_state_name)
 
 # Initialize the state. E.g. change the animation
 func enter(host):
@@ -26,4 +27,3 @@ func update(host, delta):
 
 func _on_animation_finished(anim_name):
 	return
-	

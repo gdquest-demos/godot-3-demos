@@ -1,19 +1,21 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://player/state_machine.gd" type="Script" id=1]
+[ext_resource path="res://player/state-machine.gd" type="Script" id=1]
 [ext_resource path="res://player/shadow.png" type="Texture" id=2]
 [ext_resource path="res://player/body.png" type="Texture" id=3]
-[ext_resource path="res://player/states/motion/on_ground/idle.gd" type="Script" id=4]
-[ext_resource path="res://player/states/motion/on_ground/move.gd" type="Script" id=5]
-[ext_resource path="res://player/states/motion/in-air/jump.gd" type="Script" id=6]
-[ext_resource path="res://player/states/combat/stagger.gd" type="Script" id=7]
-[ext_resource path="res://bullet/bullet_spawner.gd" type="Script" id=8]
-[ext_resource path="res://fonts/source_code_pro_explanations_bold.tres" type="DynamicFont" id=9]
-[ext_resource path="res://fonts/source_code_pro_explanations.tres" type="DynamicFont" id=10]
-[ext_resource path="res://debug/explanations.gd" type="Script" id=11]
-[ext_resource path="res://fonts/SourceCodePro-Bold.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://player/states/debug/state_name_displayer.gd" type="Script" id=13]
-[ext_resource path="res://debug/states_stack_displayer.gd" type="Script" id=14]
+[ext_resource path="res://player/weapon/weapon_pivot.gd" type="Script" id=4]
+[ext_resource path="res://player/weapon/Sword.tscn" type="PackedScene" id=5]
+[ext_resource path="res://player/health/Health.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player/states/motion/on_ground/idle.gd" type="Script" id=7]
+[ext_resource path="res://player/states/motion/on_ground/move.gd" type="Script" id=8]
+[ext_resource path="res://player/states/motion/in_air/jump.gd" type="Script" id=9]
+[ext_resource path="res://player/states/combat/stagger.gd" type="Script" id=10]
+[ext_resource path="res://player/states/combat/attack.gd" type="Script" id=11]
+[ext_resource path="res://player/states/die.gd" type="Script" id=12]
+[ext_resource path="res://player/bullet/bullet_spawner.gd" type="Script" id=13]
+[ext_resource path="res://fonts/SourceCodePro-Bold.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://player/states/debug/state-name-displayer.gd" type="Script" id=15]
+
 
 [sub_resource type="Animation" id=1]
 
@@ -23,7 +25,6 @@ step = 0.1
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "stagger"
 length = 0.6
 loop = false
 step = 0.1
@@ -51,10 +52,10 @@ step = 0.1
 size = 20
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 12 )
+font_data = ExtResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 628.826, 391.266 )
 input_pickable = false
@@ -67,66 +68,7 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="Shadow" type="Sprite" parent="." index="0"]
-
-self_modulate = Color( 1, 1, 1, 0.361098 )
-position = Vector2( 0, -4 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="BodyPivot" type="Position2D" parent="." index="1"]
-
-[node name="Body" type="Sprite" parent="BodyPivot" index="0"]
-
-position = Vector2( 0, -58.8242 )
-texture = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
-
-build_mode = 0
-polygon = PoolVector2Array( -20, 0, -20, -20, 20, -20, 20, 0 )
-
-[node name="States" type="Node" parent="." index="3"]
-
-[node name="Idle" type="Node" parent="States" index="0"]
-
-script = ExtResource( 4 )
-
-[node name="Move" type="Node" parent="States" index="1"]
-
-script = ExtResource( 5 )
-MAX_WALK_SPEED = 450
-MAX_RUN_SPEED = 700
-
-[node name="Jump" type="Node" parent="States" index="2"]
-
-script = ExtResource( 6 )
-BASE_MAX_HORIZONTAL_SPEED = 400.0
-AIR_ACCELERATION = 1000.0
-AIR_DECCELERATION = 2000.0
-AIR_STEERING_POWER = 50.0
-JUMP_HEIGHT = 120.0
-JUMP_DURATION = 0.8
-GRAVITY = 1600.0
-
-[node name="Stagger" type="Node" parent="States" index="3"]
-
-script = ExtResource( 7 )
-
-[node name="BulletSpawn" type="Node2D" parent="." index="4"]
-
-position = Vector2( 1.17401, -61.266 )
-script = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CooldownTimer" type="Timer" parent="BulletSpawn" index="0"]
-
-process_mode = 1
-wait_time = 0.2
-one_shot = true
-autostart = false
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -138,132 +80,90 @@ anims/stagger = SubResource( 2 )
 anims/walk = SubResource( 3 )
 blend_times = [  ]
 
-[node name="Explanations" type="RichTextLabel" parent="." index="6"]
+[node name="Shadow" type="Sprite" parent="." index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = -370.0
-margin_right = -10.0
-margin_bottom = -730.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/bold_font = ExtResource( 9 )
-custom_fonts/normal_font = ExtResource( 10 )
-bbcode_enabled = true
-bbcode_text = "This example shows how to apply the State programming pattern in GDscript, including Hierarchical States, and a pushdown automaton. 
+self_modulate = Color( 1, 1, 1, 0.361098 )
+position = Vector2( 0, -4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
-States are common in games. You can use the pattern to:
+[node name="BodyPivot" type="Position2D" parent="." index="2"]
 
-1. Separate each behavior and transitions between behaviors, thus make scripts shorter and easier to manage
-2. Respect the Single Responsibility Principle. Each State object represents [b]one[/b] action
-3. Improve your code's structure. Look at the scene tree and FileSystem tab: without looking at the code, you'll know what the Player can or cannot do.
+[node name="Body" type="Sprite" parent="BodyPivot" index="0"]
 
-You can read more about States in the excellent [url=http://gameprogrammingpatterns.com/state.html]Game Programming Patterns ebook[/url]."
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "This example shows how to apply the State programming pattern in GDscript, including Hierarchical States, and a pushdown automaton. 
+position = Vector2( 0, -58.8242 )
+texture = ExtResource( 3 )
 
-States are common in games. You can use the pattern to:
+[node name="WeaponPivot" type="Position2D" parent="." index="3"]
 
-1. Separate each behavior and transitions between behaviors, thus make scripts shorter and easier to manage
-2. Respect the Single Responsibility Principle. Each State object represents one action
-3. Improve your code's structure. Look at the scene tree and FileSystem tab: without looking at the code, you'll know what the Player can or cannot do.
+position = Vector2( 1.17401, -61.266 )
+script = ExtResource( 4 )
 
-You can read more about States in the excellent Game Programming Patterns ebook."
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
+[node name="Offset" type="Position2D" parent="WeaponPivot" index="0"]
+
+position = Vector2( 110, 0 )
+
+[node name="Sword" parent="WeaponPivot/Offset" index="0" instance=ExtResource( 5 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="4"]
+
+build_mode = 0
+polygon = PoolVector2Array( -20, 0, -20, -20, 20, -20, 20, 0 )
+
+[node name="Health" parent="." index="5" instance=ExtResource( 6 )]
+
+[node name="States" type="Node" parent="." index="6"]
+
+[node name="Idle" type="Node" parent="States" index="0"]
+
+script = ExtResource( 7 )
+
+[node name="Move" type="Node" parent="States" index="1"]
+
+script = ExtResource( 8 )
+MAX_WALK_SPEED = 450
+MAX_RUN_SPEED = 700
+
+[node name="Jump" type="Node" parent="States" index="2"]
+
+script = ExtResource( 9 )
+BASE_MAX_HORIZONTAL_SPEED = 400.0
+AIR_ACCELERATION = 1000.0
+AIR_DECCELERATION = 2000.0
+AIR_STEERING_POWER = 50.0
+JUMP_HEIGHT = 120.0
+JUMP_DURATION = 0.8
+GRAVITY = 1600.0
+
+[node name="Stagger" type="Node" parent="States" index="3"]
+
+script = ExtResource( 10 )
+
+[node name="Attack" type="Node" parent="States" index="4"]
+
 script = ExtResource( 11 )
-_sections_unfolded = [ "BBCode", "custom_fonts" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Panel" type="Panel" parent="." index="7"]
+[node name="Die" type="Node" parent="States" index="5"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1060.0
-margin_right = 1280.0
-margin_bottom = 170.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource( 12 )
 
-[node name="Keys" type="Label" parent="Panel" index="0"]
+[node name="BulletSpawn" type="Node2D" parent="." index="7"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = -10.0
-margin_bottom = -10.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
-text = "Shoot:
-Stagger:
-Jump:
-Sprint:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "BBCode", "custom_fonts" ]
+editor/display_folded = true
+position = Vector2( 1.17401, -61.266 )
+script = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Keys2" type="Label" parent="Panel" index="1"]
+[node name="CooldownTimer" type="Timer" parent="BulletSpawn" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = -10.0
-margin_bottom = -10.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
-text = "R
-X
-Space
-Shift"
-align = 2
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "BBCode", "custom_fonts" ]
+process_mode = 1
+wait_time = 0.2
+one_shot = true
+autostart = false
 
 [node name="StateNameDisplayer" type="Label" parent="." index="8"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -286,106 +186,13 @@ uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 13 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Rect", "custom_fonts" ]
-
-[node name="StatesStackDiplayer" type="Panel" parent="." index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 210.0
-margin_bottom = 170.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 14 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Title" type="Label" parent="StatesStackDiplayer" index="0"]
-
-anchor_left = 0.5
-anchor_top = 0.0
-anchor_right = 0.5
-anchor_bottom = 0.0
-margin_left = -105.0
-margin_right = 105.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
-text = "Pushown"
-align = 1
-valign = 1
-uppercase = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="States" type="Label" parent="StatesStackDiplayer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 20.0
-margin_top = 50.0
-margin_right = 190.0
-margin_bottom = 170.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
-text = "Jump
-Test"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="Numbers" type="Label" parent="StatesStackDiplayer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 20.0
-margin_top = 50.0
-margin_right = 190.0
-margin_bottom = 170.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
-text = "1.
-2."
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="state_changed" from="." to="StateNameDisplayer" method="_on_Player_state_changed"]
 
-[connection signal="state_changed" from="." to="StatesStackDiplayer" method="_on_Player_state_changed"]
-
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
+
+[connection signal="attack_finished" from="WeaponPivot/Offset/Sword" to="States/Attack" method="_on_Sword_attack_finished"]
 
 
