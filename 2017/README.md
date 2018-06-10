@@ -4,7 +4,7 @@ Looking for Godot 2 demos? You came to the right place! Here you'll find all the
 
 These were made possible by the 760 generous supporters who backed [Make Professional 2D Games with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) on Kickstarter.
 
-![A few screenshots from the demos](https://raw.githubusercontent.com/GDquest/Godot-engine-tutorial-demos/master/2017/assets/open_source_demos_illust_small.png)
+![Four screenshots of the projects in Godot](https://raw.githubusercontent.com/GDquest/Godot-engine-tutorial-demos/master/img/godot-3-demos-fs8.png)
 
 Project organization:
 
