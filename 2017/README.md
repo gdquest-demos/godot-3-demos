@@ -1,6 +1,6 @@
-# Open source Godot 3 and Godot 2 demo
+# Open source Godot 2 demos
 
-Looking for Godot 3 demos? You came to the right place! Here you'll find all the companion demos for the tutorials on the [ GDquest Youtube channel ](http://youtube.com/c/gdquest).
+Looking for Godot 2 demos? You came to the right place! Here you'll find all the companion demos for the tutorials on the [ GDquest Youtube channel ](http://youtube.com/c/gdquest).
 
 These were made possible by the 760 generous supporters who backed [Make Professional 2D Games with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) on Kickstarter.
 
@@ -17,7 +17,6 @@ Project organization:
 1. [Youtube playlist](https://www.youtube.com/playlist?list=PLhqJJNjsQ7KEr_YlibZ3SBuzfw9xwGduK)
 2. [Tutorial page](http://gdquest.com/tutorial/game-design/godot/30-days-free-game-creation-tutorial/) on GDquest
 3. [Godot 3 course](https://gumroad.com/gdquest) (Premium)
-
 
 You can reach me on [ Twitter ](https://twitter.com/NathanGDquest)
 
