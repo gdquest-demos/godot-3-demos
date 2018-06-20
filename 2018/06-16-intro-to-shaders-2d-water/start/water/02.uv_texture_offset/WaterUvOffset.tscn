@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://water/Water.tscn" type="PackedScene" id=1]
+[ext_resource path="res://water/02.uv_texture_offset/water_texture_offset.material" type="Material" id=2]
+
+[node name="WaterUvOffset" index="0" instance=ExtResource( 1 )]
+
+material = ExtResource( 2 )
+scale = Vector2( 8.08363, 5.95946 )
+
+

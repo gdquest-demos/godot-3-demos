@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://water/Water.tscn" type="PackedScene" id=1]
+[ext_resource path="res://water/02.uv_texture_offset/water_texture_offset_material.tres" type="Material" id=2]
+
+[node name="WaterTextureOffset" index="0" instance=ExtResource( 1 )]
+
+material = ExtResource( 2 )
+
+

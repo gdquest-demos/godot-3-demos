@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://water/textures/water_diffuse.png" type="Texture" id=1]
+[ext_resource path="res://water/water.gd" type="Script" id=2]
+
+[node name="Water" type="Sprite" index="0"]
+
+scale = Vector2( 4.29688, 2.53906 )
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+_sections_unfolded = [ "Material" ]
+
+[connection signal="item_rect_changed" from="." to="." method="_on_item_rect_changed"]
+
+

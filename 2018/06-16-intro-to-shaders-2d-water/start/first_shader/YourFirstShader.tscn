@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://first_shader/dancing_godot/DancingGodot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://first_shader/interface/AmplitudeController.tscn" type="PackedScene" id=2]
+
+[node name="YourFirstShader" type="Node" index="0"]
+
+[node name="DancingGodot" parent="." index="0" instance=ExtResource( 1 )]
+
+margin_left = 460.0
+margin_top = 210.0
+margin_right = 588.0
+margin_bottom = 338.0
+
+[node name="AmplitudeController" parent="." index="1" instance=ExtResource( 2 )]
+
+margin_left = 460.0
+margin_top = 354.0
+margin_right = 588.0
+margin_bottom = 394.0
+
+

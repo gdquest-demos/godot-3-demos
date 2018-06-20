@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://water/Water.tscn" type="PackedScene" id=1]
+[ext_resource path="res://water/03.lighting/water_lighting_material.tres" type="Material" id=2]
+
+[node name="WaterLit" index="0" instance=ExtResource( 1 )]
+
+material = ExtResource( 2 )
+scale = Vector2( 4.33168, 2.57445 )
+
+

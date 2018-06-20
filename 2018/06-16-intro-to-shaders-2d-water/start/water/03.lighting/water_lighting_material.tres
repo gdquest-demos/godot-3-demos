@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://water/03.lighting/water_lighting.shader" type="Shader" id=1]
+[ext_resource path="res://water/textures/water_uv_offset.png" type="Texture" id=2]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/tile_factor = 8.0
+shader_param/aspect_ratio = 0.594332
+shader_param/uv_offset_scale = Vector2( 0.8, 0.5 )
+shader_param/wave_size = 0.02
+shader_param/time_scale = Vector2( 0.03, 0.04 )
+shader_param/uv_offset_texture = ExtResource( 2 )
+_sections_unfolded = [ "shader_param" ]
+

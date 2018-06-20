@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://water/Water.tscn" type="PackedScene" id=1]
+[ext_resource path="res://water/03.lighting/water_lighting_material.tres" type="Material" id=2]
+[ext_resource path="res://water/textures/water_normal.png" type="Texture" id=3]
+[ext_resource path="res://water/textures/light.png" type="Texture" id=4]
+
+[node name="WaterLit" index="0" instance=ExtResource( 1 )]
+
+material = ExtResource( 2 )
+scale = Vector2( 4.33168, 2.57445 )
+normal_map = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="." index="0"]
+
+position = Vector2( 102.4, 133.908 )
+scale = Vector2( 0.653647, 1.64583 )
+enabled = true
+editor_only = false
+texture = ExtResource( 4 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 0.5
+mode = 0
+range_height = 50.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Material", "Range" ]
+
+

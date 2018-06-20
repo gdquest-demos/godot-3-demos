@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://water/05.with_shadow/water_with_shadow_material.tres" type="Material" id=1]
+[ext_resource path="res://water/textures/water_diffuse.png" type="Texture" id=2]
+[ext_resource path="res://water/textures/water_normal.png" type="Texture" id=3]
+[ext_resource path="res://water/water.gd" type="Script" id=4]
+[ext_resource path="res://water/textures/light.png" type="Texture" id=5]
+
+[node name="WaterWithShadow" type="Sprite" index="0"]
+
+material = ExtResource( 1 )
+position = Vector2( 1682, 444 )
+scale = Vector2( 4.84375, 3.04688 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Light2D" type="Light2D" parent="." index="0"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 5 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 0.5
+mode = 0
+range_height = 100.0
+range_z_min = 0
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[connection signal="item_rect_changed" from="." to="." method="_on_item_rect_changed"]
+
+

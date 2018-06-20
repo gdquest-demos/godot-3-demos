@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://first_shader/dancing_godot/dancing_godot.shader" type="Shader" id=1]
+
+
+
+
+
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/time_factor = 2.0
+shader_param/amplitude = Vector2( 10, 10 )
+_sections_unfolded = [ "shader_param" ]
+
