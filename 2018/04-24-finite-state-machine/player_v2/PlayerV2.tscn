@@ -198,4 +198,6 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="attack_finished" from="WeaponPivot/Offset/Sword" to="StateMachine/Attack" method="_on_Sword_attack_finished"]
 
+[connection signal="state_changed" from="StateMachine" to="WeaponPivot/Offset/Sword" method="_on_StateMachine_state_changed"]
+
 

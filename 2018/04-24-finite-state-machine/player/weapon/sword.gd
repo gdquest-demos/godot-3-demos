@@ -96,3 +96,7 @@ func _on_animation_finished(name):
 	else:
 		_change_state(IDLE)
 		emit_signal("attack_finished")
+
+func _on_StateMachine_state_changed(current_state):
+	if current_state.name == "Attack":
+		attack()
