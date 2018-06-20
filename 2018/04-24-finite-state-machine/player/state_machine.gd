@@ -1,4 +1,12 @@
 """
+Original state machine example for the Youtube tutorial
+Look into the /player_v2 folder for a better example:
+	- it has a reusable state_machine script
+	- the state_machine is separate from the KinematicBody2D node
+
+The principles explained here are still the same, v2 just shows a 
+better separation of concerns/code structure
+
 The point of the State pattern is to separate concerns, to help follow
 the single responsibility principle. Each state describes an action or 
 behavior.
@@ -42,13 +50,11 @@ func _ready():
 	current_state = states_stack[0]
 	_change_state("idle")
 
-
 # The state machine delegates process and input callbacks to the current state
 # The state object, e.g. Move, then handles input, calculates velocity 
 # and moves what I called its "host", the Player node (KinematicBody2D) in this case.
 func _physics_process(delta):
-	current_state.update(self, delta)
-
+	current_state.update(delta)
 
 func _input(event):
 	"""
@@ -56,18 +62,15 @@ func _input(event):
 	fire bullets anytime.
 	If that"s the case you don"t want to use the states. They"ll add micro
 	freezes in the gameplay and/or make your code more complex
-	Firing is the weapon"s responsibility (BulletSpawn here) so the weapon should handle it
+	Firing is the weapon"s responsibility (BulletSpawn here) so the code for shooting
+	is all on BulletSpawner (including input)
 	"""
-	if event.is_action_pressed("fire"):
-		$BulletSpawn.fire(look_direction)
-		return
-	elif event.is_action_pressed("attack"):
+	if event.is_action_pressed("attack"):
 		if current_state == $States/Attack:
 			return
 		_change_state("attack")
 		return
-	current_state.handle_input(self, event)
-
+	current_state.handle_input(event)
 
 func _on_animation_finished(anim_name):
 	"""
@@ -79,7 +82,6 @@ func _on_animation_finished(anim_name):
 	"""
 	current_state._on_animation_finished(anim_name)
 
-
 func _change_state(state_name):
 	"""
 	We use this method to:
@@ -90,7 +92,7 @@ func _change_state(state_name):
 	the state objects return the "previous" keyword and not a specific
 	state name.
 	"""
-	current_state.exit(self)
+	current_state.exit()
 
 	if state_name == "previous":
 		states_stack.pop_front()
@@ -111,9 +113,8 @@ func _change_state(state_name):
 	current_state = states_stack[0]
 	if state_name != "previous":
 		# We don"t want to reinitialize the state if we"re going back to the previous state
-		current_state.enter(self)
+		current_state.enter()
 	emit_signal("state_changed", states_stack)
-
 
 func take_damage(attacker, amount, effect=null):
 	if self.is_a_parent_of(attacker):
@@ -121,12 +122,10 @@ func take_damage(attacker, amount, effect=null):
 	$States/Stagger.knockback_direction = (attacker.global_position - global_position).normalized()
 	$Health.take_damage(amount, effect)
 
-
 func set_dead(value):
 	set_process_input(not value)
 	set_physics_process(not value)
 	$CollisionPolygon2D.disabled = value
-
 
 func set_look_direction(value):
 	look_direction = value

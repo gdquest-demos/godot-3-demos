@@ -7,9 +7,8 @@ extends "../state.gd"
 
 var knockback_direction = Vector2()
 
-func enter(host):
-	host.get_node("AnimationPlayer").play("stagger")
-
+func enter():
+	owner.get_node("AnimationPlayer").play("stagger")
 
 func _on_animation_finished(anim_name):
 	assert anim_name == "stagger"
