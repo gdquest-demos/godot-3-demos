@@ -7,10 +7,7 @@ path="res://.import/label_HP.png-c847bade826c3534e8cc40b63822ceae.stex"
 [deps]
 
 source_file="res://interface/bar/life_bar/label_HP.png"
-source_md5="9b7cddef7a75639903850a0c2cef9077"
-
 dest_files=[ "res://.import/label_HP.png-c847bade826c3534e8cc40b63822ceae.stex" ]
-dest_md5="2ecff0280dce70b7011ea91d966bbad8"
 
 [params]
 

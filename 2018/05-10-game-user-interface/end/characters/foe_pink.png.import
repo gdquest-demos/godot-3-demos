@@ -7,10 +7,7 @@ path="res://.import/foe_pink.png-dc0c6502bf079eab631dde373f48d905.stex"
 [deps]
 
 source_file="res://characters/foe_pink.png"
-source_md5="03c6dc62a6083086bc149be794340df7"
-
 dest_files=[ "res://.import/foe_pink.png-dc0c6502bf079eab631dde373f48d905.stex" ]
-dest_md5="8647f53f3fb28e703ad1cc46b24301ae"
 
 [params]
 

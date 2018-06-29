@@ -7,10 +7,7 @@ path="res://.import/icon.png-6eda633968a7588b819d85ac44513ad3.stex"
 [deps]
 
 source_file="res://interface/counter/rupees/icon.png"
-source_md5="ea73c8afbb250de2b3309e272551376b"
-
 dest_files=[ "res://.import/icon.png-6eda633968a7588b819d85ac44513ad3.stex" ]
-dest_md5="3d098642413f54a5467edeeb454f0ba8"
 
 [params]
 

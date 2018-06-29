@@ -7,10 +7,7 @@ path="res://.import/object.png-3e89ebfb3424e8759914732b2b0130c1.stex"
 [deps]
 
 source_file="res://tilesets/grid/object.png"
-source_md5="53b421d6eb9175f4b3900f7d48ad814e"
-
 dest_files=[ "res://.import/object.png-3e89ebfb3424e8759914732b2b0130c1.stex" ]
-dest_md5="1351b2d127dc461bda55bfde616cbdd6"
 
 [params]
 

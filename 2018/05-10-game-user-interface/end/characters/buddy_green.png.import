@@ -7,10 +7,7 @@ path="res://.import/buddy_green.png-d79697ef13199feee5bd4c74e389315c.stex"
 [deps]
 
 source_file="res://characters/buddy_green.png"
-source_md5="c4528aa19c3ddcd0fed29ad83f2e2d2b"
-
 dest_files=[ "res://.import/buddy_green.png-d79697ef13199feee5bd4c74e389315c.stex" ]
-dest_md5="41242cebadee472743731cb60c3f509b"
 
 [params]
 

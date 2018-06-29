@@ -7,10 +7,7 @@ path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
 [deps]
 
 source_file="res://icon.png"
-source_md5="3280104cdf8f7a9be38f70f9ff95cf50"
-
 dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="df9a76b96b1fde8b55778a269d647ca3"
 
 [params]
 

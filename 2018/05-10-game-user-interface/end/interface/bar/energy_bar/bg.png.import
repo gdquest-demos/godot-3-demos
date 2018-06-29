@@ -7,10 +7,7 @@ path="res://.import/bg.png-04d99f3c240f177b4da9072a6311b582.stex"
 [deps]
 
 source_file="res://interface/bar/energy_bar/bg.png"
-source_md5="b57ae8662f855dbbf3a188c7b28b8c7b"
-
 dest_files=[ "res://.import/bg.png-04d99f3c240f177b4da9072a6311b582.stex" ]
-dest_md5="f2a0f87e16dc108311e7e90f8c8b436c"
 
 [params]
 

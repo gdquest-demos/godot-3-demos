@@ -7,10 +7,7 @@ path="res://.import/bombs_ref_temp.png-6d00eb3dedc1825e51c439719276c8d7.stex"
 [deps]
 
 source_file="res://interface/counter/bombs/bombs_ref_temp.png"
-source_md5="3356a56aa97363d85ec7324c4cf65641"
-
 dest_files=[ "res://.import/bombs_ref_temp.png-6d00eb3dedc1825e51c439719276c8d7.stex" ]
-dest_md5="5ac19d3caaea49124d1f028f32b1f2fc"
 
 [params]
 

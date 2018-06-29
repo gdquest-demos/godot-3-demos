@@ -7,10 +7,7 @@ path="res://.import/star.png-4f164f82cf41ace82182660f1be8e68d.stex"
 [deps]
 
 source_file="res://pawns/sprites/star.png"
-source_md5="c9eed33ac490155814b63a96281718bc"
-
 dest_files=[ "res://.import/star.png-4f164f82cf41ace82182660f1be8e68d.stex" ]
-dest_md5="b5e67be995733c89f151fdfd57ade882"
 
 [params]
 

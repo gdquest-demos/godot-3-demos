@@ -7,10 +7,7 @@ path="res://.import/bg.png-e1c6c243905620e64975d7dfb08a1cba.stex"
 [deps]
 
 source_file="res://interface/bar/life_bar/bg.png"
-source_md5="df50f22ac78c3f6bdc76d80b2ca5bfe8"
-
 dest_files=[ "res://.import/bg.png-e1c6c243905620e64975d7dfb08a1cba.stex" ]
-dest_md5="2042e6830cd8af8291cae84806016916"
 
 [params]
 

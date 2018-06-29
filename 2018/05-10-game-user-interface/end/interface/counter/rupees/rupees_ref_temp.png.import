@@ -7,10 +7,7 @@ path="res://.import/rupees_ref_temp.png-ecc2917115aead57ab3bb5e4703b6f38.stex"
 [deps]
 
 source_file="res://interface/counter/rupees/rupees_ref_temp.png"
-source_md5="0d751c99fb99aed0ebea30217130da43"
-
 dest_files=[ "res://.import/rupees_ref_temp.png-ecc2917115aead57ab3bb5e4703b6f38.stex" ]
-dest_md5="ccec148a493129fa1108ccce0b2d0f61"
 
 [params]
 

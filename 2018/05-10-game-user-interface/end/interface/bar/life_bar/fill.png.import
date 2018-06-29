@@ -7,10 +7,7 @@ path="res://.import/fill.png-3130feea95b00989873cb52b212ce70f.stex"
 [deps]
 
 source_file="res://interface/bar/life_bar/fill.png"
-source_md5="498583231b7117aa7a2bdca24dd4beb9"
-
 dest_files=[ "res://.import/fill.png-3130feea95b00989873cb52b212ce70f.stex" ]
-dest_md5="ce47edc7aafecd43501db6492857e845"
 
 [params]
 

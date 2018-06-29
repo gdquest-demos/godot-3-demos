@@ -7,10 +7,7 @@ path="res://.import/label_bg.png-7289fef804bd453e5ff57bcb54b00b7b.stex"
 [deps]
 
 source_file="res://interface/counter/label_bg.png"
-source_md5="7eee3747bf3d410a21bf88caa82b4ab4"
-
 dest_files=[ "res://.import/label_bg.png-7289fef804bd453e5ff57bcb54b00b7b.stex" ]
-dest_md5="0de92b8c6458f2c82208e574e3235e90"
 
 [params]
 
