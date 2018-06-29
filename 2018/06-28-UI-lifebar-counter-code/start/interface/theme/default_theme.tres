@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=4 format=2]
+
+[ext_resource path="res://interface/theme/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://interface/theme/font/default_font_comfortaa.tres" type="DynamicFont" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 30
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[resource]
+
+default_font = ExtResource( 2 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 1 )
+Label/styles/normal = null
+_sections_unfolded = [ "Label", "Label/fonts" ]
+

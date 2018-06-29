@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://actors/player/health/health.gd" type="Script" id=1]
+
+
+[node name="Health" type="Node" index="0"]
+
+script = ExtResource( 1 )
+max_health = 9
+
+

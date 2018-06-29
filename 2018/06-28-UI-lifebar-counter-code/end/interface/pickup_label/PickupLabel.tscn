@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interface/counter/label_bg.png" type="Texture" id=1]
+[ext_resource path="res://interface/counter/icon.png" type="Texture" id=2]
+[ext_resource path="res://interface/theme/default_theme.tres" type="Theme" id=3]
+
+[node name="PickupLabel" type="NinePatchRect"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 349.0
+margin_top = 263.0
+margin_right = 439.0
+margin_bottom = 309.0
+rect_min_size = Vector2( 90, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Mouse", "Size Flags", "custom_constants" ]
+
+[node name="Icon" type="TextureRect" parent="." index="0"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = -34.0
+margin_right = 2.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 38.6598, 51.9892 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Hint", "Margin", "Rect" ]
+
+[node name="Number" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -22.0
+margin_right = 39.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 12.0022, 22.0013 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 3 )
+text = "E"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+
