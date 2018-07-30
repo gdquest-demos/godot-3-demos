@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://player/Player.gd" type="Script" id=1]
+[ext_resource path="res://player/player.png" type="Texture" id=2]
+[ext_resource path="res://weapons/rifle/Rifle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/shadow.png" type="Texture" id=4]
+[ext_resource path="res://interface/GUI.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 27.5014, 70.4704 )
+
+[node name="Player" type="KinematicBody2D" index="0" groups=[
+"players",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+
+[node name="Rifle" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Shadow" type="Sprite" parent="." index="3"]
+
+position = Vector2( 0, 57.4676 )
+z_index = -1
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="GUI" parent="." index="4" instance=ExtResource( 5 )]
+
+[node name="RespawnTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_RespawnTimer_timeout"]
+
+

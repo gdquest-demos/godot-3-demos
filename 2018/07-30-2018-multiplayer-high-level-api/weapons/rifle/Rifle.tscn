@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://weapons/rifle/rifle.png" type="Texture" id=1]
+[ext_resource path="res://weapons/rifle/Rifle.gd" type="Script" id=2]
+
+[node name="Rifle" type="Sprite" index="0"]
+
+position = Vector2( 24.7355, -4.30183 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.25
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
