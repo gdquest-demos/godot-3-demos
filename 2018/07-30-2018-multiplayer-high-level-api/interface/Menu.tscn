@@ -8,7 +8,7 @@
 [ext_resource path="res://interface/buttons/create.png" type="Texture" id=6]
 [ext_resource path="res://interface/buttons/create-pressed.png" type="Texture" id=7]
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

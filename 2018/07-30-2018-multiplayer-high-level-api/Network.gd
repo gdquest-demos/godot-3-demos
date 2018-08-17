@@ -7,8 +7,11 @@ const MAX_PLAYERS = 5
 var players = { }
 var self_data = { name = '', position = Vector2(360, 180) }
 
+signal player_disconnected
+signal server_disconnected
+
 func _ready():
-	get_tree().connect('network_peer_disconnected', self, '_player_disconnected')
+	get_tree().connect('network_peer_disconnected', self, '_on_player_disconnected')
 
 func create_server(player_nickname):
 	self_data.name = player_nickname
@@ -28,12 +31,7 @@ func _connected_to_server():
 	players[get_tree().get_network_unique_id()] = self_data
 	rpc('_send_player_info', get_tree().get_network_unique_id(), self_data)
 
-func _player_connected(id):
-	print('Player connected: ' + str(id))
-
-func _player_disconnected(id):
-	#TODO: Remove player from game scene / fallback if server
-	print('Player disconnected: ' + str(id))
+func _on_player_disconnected(id):
 	players.erase(id)
 
 remote func _send_player_info(id, info):
@@ -45,7 +43,7 @@ remote func _send_player_info(id, info):
 	var new_player = load('res://player/Player.tscn').instance()
 	new_player.name = str(id)
 	new_player.set_network_master(id)
-	get_tree().get_root().add_child(new_player)
+	$'/root/Game/'.add_child(new_player)
 	new_player.init(info.name, info.position, true)
 
 func update_position(id, position):
