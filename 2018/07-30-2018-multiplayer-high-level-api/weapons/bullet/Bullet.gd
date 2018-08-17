@@ -3,13 +3,13 @@ extends Area2D
 export(float) var SPEED = 1500
 export(float) var DAMAGE = 15
 
-var direction = Vector2(1, 0)
+var direction = 0
 
 func _ready():
 	set_as_toplevel(true)
 
 func _process(delta):
-	position += direction * SPEED * delta
+	position.x += direction * SPEED * delta
 
 func _on_body_entered(body):
 	if body.is_a_parent_of(self):

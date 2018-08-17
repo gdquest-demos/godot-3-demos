@@ -15,4 +15,4 @@ sync func _shoot():
 	var bullet = Bullet.instance()
 	add_child(bullet)
 	bullet.global_position = global_position
-	bullet.direction = get_local_mouse_position().normalized()
+	bullet.direction = -1 if flip_h else 1
