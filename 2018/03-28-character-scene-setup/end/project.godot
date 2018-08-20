@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Create the Character scene (end)"
-run/main_scene="res://characters/player/player.tscn"
+run/main_scene="res://characters/player/Player.tscn"
 config/icon="res://icon.png"
 
 [display]
