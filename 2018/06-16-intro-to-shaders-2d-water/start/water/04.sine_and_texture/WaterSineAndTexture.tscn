@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://water/Water.tscn" type="PackedScene" id=1]
+[ext_resource path="res://water/04.sine_and_texture/water_sine_and_texture.material" type="Material" id=2]
+
+[node name="WaterSine" index="0" instance=ExtResource( 1 )]
+
+material = ExtResource( 2 )
+scale = Vector2( 4.76563, 2.61719 )
+
+

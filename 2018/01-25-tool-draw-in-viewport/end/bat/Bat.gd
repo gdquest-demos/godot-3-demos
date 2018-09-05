@@ -37,4 +37,4 @@ func _draw():
 		var time = time_step * i
 		var new_point = Vector2(time * speed, sin(time * 10) * sine_amplitude)
 		points_array.append(new_point)
-	draw_polyline(points_array, Color(1.0,1.0,1.0), 2.0)
+	draw_polyline(points_array, Color(1.0,1.0,1.0), 2.0, true)

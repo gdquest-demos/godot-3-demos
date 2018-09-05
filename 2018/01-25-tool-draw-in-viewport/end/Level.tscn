@@ -1,17 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=1]
+[ext_resource path="res://bat/Bat.tscn" type="PackedScene" id=2]
 
 [node name="Level" type="Node" index="0"]
 
 [node name="Npc" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 189.382, 384.796 )
+position = Vector2( 153.382, 476.796 )
 patrol_vector = Vector2( 120, -200 )
 
 [node name="Npc2" parent="." index="1" instance=ExtResource( 1 )]
 
-position = Vector2( 795.515, 348.146 )
+position = Vector2( 518.338, 384.969 )
 patrol_vector = Vector2( -200, 120 )
+
+[node name="Npc3" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 796.419, 458.163 )
+patrol_vector = Vector2( -120, -200 )
+
+[node name="Bat" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 130.432, 147.241 )
+sine_amplitude = 60.0
 
 

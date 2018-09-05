@@ -7,7 +7,7 @@
 [ext_resource path="res://items/PickableItem.tscn" type="PackedScene" id=5]
 [ext_resource path="res://background/bg.png" type="Texture" id=6]
 
-[node name="Demo" type="Node" index="0"]
+[node name="Demo" type="Node"]
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="." index="0"]
 
@@ -30,7 +30,6 @@ script = ExtResource( 3 )
 
 [node name="Player" parent="." index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 position = Vector2( 633, 422 )
 
 [node name="Health" parent="Player" index="6"]

@@ -87,7 +87,7 @@ func _set_patrol_vector(value):
 func _draw():
 	if not Engine.editor_hint:
 		return
-	draw_line(Vector2(), patrol_vector, COLOR_WHITE, 4.0)
+	draw_line(Vector2(), patrol_vector, COLOR_WHITE, 4.0, true)
 	
 	draw_circle( patrol_vector, 12.0, COLOR_WHITE)
 	draw_circle( patrol_vector, 10.0, Color('#fbc02d'))

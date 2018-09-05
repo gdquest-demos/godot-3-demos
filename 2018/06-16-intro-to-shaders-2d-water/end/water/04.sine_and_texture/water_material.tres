@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=2]
 
-[ext_resource path="res://water/04.sine_and_texture/water.shader" type="Shader" id=1]
+[ext_resource path="res://water/04.sine_and_texture/sine_and_texture.shader" type="Shader" id=1]
 [ext_resource path="res://water/textures/water_uv_offset.png" type="Texture" id=2]
 
 [resource]
@@ -9,11 +9,11 @@ render_priority = 0
 shader = ExtResource( 1 )
 shader_param/tile_factor = 10.0
 shader_param/aspect_ratio = 0.590908
-shader_param/uv_offset_scale = Vector2( 0.5, 0.5 )
-shader_param/wave_size = 0.05
-shader_param/time_scale = 0.05
-shader_param/sine_time_scale = 4.0
-shader_param/sine_offset_scale = Vector2( 0.4, 1.4 )
+shader_param/uv_offset_scale = Vector2( 0.3, 0.2 )
+shader_param/wave_size = 0.08
+shader_param/time_scale = 0.06
+shader_param/sine_time_scale = 2.0
+shader_param/sine_offset_scale = Vector2( 1.8, 1.2 )
 shader_param/sine_wave_size = 0.1
 shader_param/uv_offset_texture = ExtResource( 2 )
 _sections_unfolded = [ "shader_param" ]

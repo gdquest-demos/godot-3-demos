@@ -17,17 +17,14 @@ margin_bottom = 0.0
 
 [node name="Background" type="Sprite" parent="." index="1"]
 
-position = Vector2( 684, 383 )
+position = Vector2( 643.041, 358.943 )
+scale = Vector2( 0.940031, 0.937351 )
 z_index = -1
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Z Index" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Characters" type="YSort" parent="." index="2"]
 
-editor/display_folded = true
 sort_enabled = true
 __meta__ = {
 "_edit_lock_": true
@@ -35,7 +32,8 @@ __meta__ = {
 
 [node name="Green" type="Sprite" parent="Characters" index="0"]
 
-position = Vector2( 306.117, 532.928 )
+editor/display_folded = true
+position = Vector2( 314.279, 519.324 )
 texture = ExtResource( 3 )
 
 [node name="shadow" type="Sprite" parent="Characters/Green" index="0"]
@@ -46,7 +44,8 @@ texture = ExtResource( 4 )
 
 [node name="Orange" type="Sprite" parent="Characters" index="1"]
 
-position = Vector2( 500.676, 389.37 )
+editor/display_folded = true
+position = Vector2( 487.072, 394.811 )
 texture = ExtResource( 5 )
 
 [node name="shadow" type="Sprite" parent="Characters/Orange" index="0"]
@@ -57,7 +56,8 @@ texture = ExtResource( 4 )
 
 [node name="Pink" type="Sprite" parent="Characters" index="2"]
 
-position = Vector2( 995.54, 422.694 )
+editor/display_folded = true
+position = Vector2( 957.449, 400.928 )
 texture = ExtResource( 6 )
 
 [node name="shadow" type="Sprite" parent="Characters/Pink" index="0"]

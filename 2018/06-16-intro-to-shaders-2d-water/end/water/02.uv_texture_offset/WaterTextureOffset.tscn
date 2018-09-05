@@ -5,6 +5,7 @@
 
 [node name="WaterTextureOffset" index="0" instance=ExtResource( 1 )]
 
+visible = true
 material = ExtResource( 2 )
 
 

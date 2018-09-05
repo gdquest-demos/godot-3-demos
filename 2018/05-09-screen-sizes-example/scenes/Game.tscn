@@ -68,6 +68,32 @@ position = Vector2( 0, 510 )
 build_mode = 0
 polygon = PoolVector2Array( 640, -530, 640, -10, 660, -10, 660, -530 )
 
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+position = Vector2( 318.735, 241.871 )
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 0.8, 0.8 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
 [connection signal="input_direction_changed" from="Interface/TouchButtons" to="Level/Player" method="_on_TouchButtons_input_direction_changed"]
 
 

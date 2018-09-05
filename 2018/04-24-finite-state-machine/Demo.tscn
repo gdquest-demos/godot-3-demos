@@ -5,7 +5,7 @@
 [ext_resource path="res://debug/ControlsPanel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://debug/Explanations.tscn" type="PackedScene" id=4]
 
-[node name="Demo" type="Node" index="0"]
+[node name="Demo" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
