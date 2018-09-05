@@ -13,3 +13,4 @@ func _input(event):
 		return
 	_character.gain_experience(34)
 	_label.update_text(_character.level, _character.experience, _character.experience_required)
+	print(randi()%3)
