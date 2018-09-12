@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://input_menu/input_line/InputLine.gd" type="Script" id=1]
+[ext_resource path="res://input_menu/fonts/montserrat-extra-bold-24px.tres" type="DynamicFont" id=2]
+[ext_resource path="res://input_menu/buttons/change.png" type="Texture" id=3]
+[ext_resource path="res://input_menu/buttons/change-pressed.png" type="Texture" id=4]
+[ext_resource path="res://input_menu/buttons/change-disabled.png" type="Texture" id=5]
+
+[node name="InputLine" type="HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="Action" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 16.0
+margin_right = 424.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+text = "Up"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="Key" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 428.0
+margin_right = 852.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 2 )
+text = "W Key"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="ChangeButton" type="TextureButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1152.0
+margin_right = 1280.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 10
+size_flags_vertical = 8
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect", "Size Flags", "Textures" ]
+
+[connection signal="pressed" from="ChangeButton" to="." method="_on_ChangeButton_pressed"]
+
+
