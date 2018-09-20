@@ -12,6 +12,7 @@ config_version=3
 
 config/name="GDquest Shaders"
 config/icon="res://icon.png"
+tconfig/icon="res://icon.png"
 
 [rendering]
 
