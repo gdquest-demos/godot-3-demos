@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://shaders/TransitionColor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://shaders/outline.material" type="Material" id=2]
+[ext_resource path="res://shaders/test_sprite.png" type="Texture" id=3]
+
+[node name="Shaders" type="Node" index="0"]
+
+[node name="Overlay" type="CanvasLayer" parent="." index="0"]
+
+layer = 100
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="TransitionColor" parent="Overlay" index="0" instance=ExtResource( 1 )]
+
+color = Color( 0, 0, 0, 1 )
+
+[node name="OutlineShader" type="Sprite" parent="." index="1"]
+
+material = ExtResource( 2 )
+position = Vector2( 210, 300 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material" ]
+
+
+[editable path="Overlay/TransitionColor"]
