@@ -13,14 +13,3 @@ void fragment()
 	float alpha = smoothstep(cutoff, cutoff + smooth_size, value * (1.0 - smooth_size) + smooth_size);
 	COLOR = vec4(color.rgb, alpha);
 }
-
-//	alpha = step(value, cutoff);
-//	if (value < cutoff) { 
-//		COLOR = vec4(0.0, 0.0, 0.0, 1.0);
-//	} 
-//	else if (value < cutoff + 0.1) { 
-//		COLOR = vec4(0.0, 0.0, 0.0, (cutoff + 0.1 - value) / 0.1);
-//	}
-//	else {
-//		COLOR = vec4(0.0, 0.0, 0.0, 0.0);
-//	}

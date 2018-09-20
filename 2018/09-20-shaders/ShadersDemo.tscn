@@ -21,7 +21,7 @@ color = Color( 0, 0, 0, 1 )
 [node name="OutlineShader" type="Sprite" parent="." index="1"]
 
 material = ExtResource( 2 )
-position = Vector2( 210, 300 )
+position = Vector2( 240, 270 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Material" ]
 
