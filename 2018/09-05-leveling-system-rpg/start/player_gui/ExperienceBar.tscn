@@ -5,8 +5,7 @@
 [ext_resource path="res://player_gui/TextureProgress.gd" type="Script" id=3]
 [ext_resource path="res://player_gui/text_experience.png" type="Texture" id=4]
 
-
-[node name="ExperienceBar" type="TextureProgress" index="0"]
+[node name="ExperienceBar" type="TextureProgress"]
 
 anchor_left = 0.0
 anchor_top = 0.0

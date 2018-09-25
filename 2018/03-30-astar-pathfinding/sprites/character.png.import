@@ -7,10 +7,7 @@ path="res://.import/character.png-eb70ac48a5acf508c4b7740ea4ac4fae.stex"
 [deps]
 
 source_file="res://sprites/character.png"
-source_md5="8746d76344ac3bad60c33b1bc43e11fd"
-
 dest_files=[ "res://.import/character.png-eb70ac48a5acf508c4b7740ea4ac4fae.stex" ]
-dest_md5="e874204705e06ca4dc2c9b0a90db7e8a"
 
 [params]
 

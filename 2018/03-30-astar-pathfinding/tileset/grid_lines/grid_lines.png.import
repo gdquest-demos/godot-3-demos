@@ -7,10 +7,7 @@ path="res://.import/grid_lines.png-34641e8f2f8ad7f5cefd02399f855a5a.stex"
 [deps]
 
 source_file="res://tileset/grid_lines/grid_lines.png"
-source_md5="9c6f3c1506ccfc666a4988a3b9655b1c"
-
 dest_files=[ "res://.import/grid_lines.png-34641e8f2f8ad7f5cefd02399f855a5a.stex" ]
-dest_md5="411604865dd58a1618832442af953934"
 
 [params]
 
