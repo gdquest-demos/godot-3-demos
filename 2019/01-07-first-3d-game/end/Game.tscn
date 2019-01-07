@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/Level1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interface/FinalMenu.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Level1" parent="." instance=ExtResource( 3 )]
+
+[node name="FinalMenu" parent="." instance=ExtResource( 4 )]
+
+[connection signal="level_completed" from="Level1" to="." method="_on_Level1_level_completed"]
+[connection signal="retried" from="FinalMenu" to="." method="_on_FinalMenu_retried"]
