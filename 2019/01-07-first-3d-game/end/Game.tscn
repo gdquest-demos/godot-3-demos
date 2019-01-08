@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 [node name="Level1" parent="." instance=ExtResource( 3 )]
 
 [node name="FinalMenu" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [connection signal="level_completed" from="Level1" to="." method="_on_Level1_level_completed"]
 [connection signal="retried" from="FinalMenu" to="." method="_on_FinalMenu_retried"]

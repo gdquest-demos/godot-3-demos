@@ -10,7 +10,6 @@ size = 56
 font_data = ExtResource( 2 )
 
 [node name="FinalMenu" type="Control"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -20,21 +19,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Column" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 474.0
+margin_left = 489.0
 margin_top = 278.0
-margin_right = 806.0
+margin_right = 790.0
 margin_bottom = 442.0
 
 [node name="Title" type="Label" parent="CenterContainer/Column"]
-margin_right = 332.0
+margin_right = 301.0
 margin_bottom = 70.0
 custom_fonts/font = SubResource( 1 )
-text = "Game Over"
+text = "Success!"
 align = 1
 
 [node name="Time" type="Label" parent="CenterContainer/Column"]
 margin_top = 74.0
-margin_right = 332.0
+margin_right = 301.0
 margin_bottom = 114.0
 custom_fonts/font = ExtResource( 3 )
 text = "Total time: 1m 32s"
@@ -42,7 +41,7 @@ align = 1
 
 [node name="Row" type="HBoxContainer" parent="CenterContainer/Column"]
 margin_top = 118.0
-margin_right = 332.0
+margin_right = 301.0
 margin_bottom = 164.0
 custom_constants/separation = 25
 
@@ -55,7 +54,7 @@ text = "Try Again"
 
 [node name="Exit" type="Button" parent="CenterContainer/Column/Row"]
 margin_left = 200.0
-margin_right = 332.0
+margin_right = 301.0
 margin_bottom = 46.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
