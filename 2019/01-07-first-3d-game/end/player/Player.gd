@@ -11,5 +11,5 @@ func _physics_process(delta : float) -> void:
 
   rotation.y += rotate * rotate_speed * delta
   var direction : Vector3 = Vector3(0, 0, 1).rotated(Vector3(0, 1, 0), rotation.y)
-  var velocity : Vector3 = direction * z_movement * delta * move_speed
-  move_and_collide(velocity)
+  var motion : Vector3 = direction * z_movement * delta * move_speed
+  move_and_collide(motion)
