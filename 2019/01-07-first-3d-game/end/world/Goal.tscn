@@ -1,23 +1,21 @@
 [gd_scene load_steps=4 format=2]
 
-[sub_resource type="CylinderShape" id=6]
+[sub_resource type="CylinderShape" id=1]
 
 
-[sub_resource type="SphereMesh" id=7]
+[sub_resource type="SphereMesh" id=2]
 
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=3]
 
-albedo_color = Color( 0.32549, 0.807843, 0.0784314, 1 )
+albedo_color = Color( 0.992157, 0.101961, 0.603922, 1 )
 
 [node name="Goal" type="Area"]
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -22 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 7 )
-material/0 = SubResource( 8 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
 

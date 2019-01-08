@@ -2,9 +2,20 @@
 
 [sub_resource type="ProceduralSky" id=1]
 
+sky_top_color = Color( 0.537255, 0.823529, 0.980392, 1 )
 
 [resource]
 
 background_mode = 2
 background_sky = SubResource( 1 )
+background_color = Color( 0.729412, 0.654902, 0.654902, 1 )
+fog_depth_end = 40.0
+tonemap_mode = 2
+auto_exposure_scale = 0.75
+auto_exposure_max_luma = 5.26
+auto_exposure_speed = 0.24
+ssao_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 1.44
+adjustment_contrast = 1.23
 
