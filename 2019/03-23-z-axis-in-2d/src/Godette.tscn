@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Godette.gd" type="Script" id=1]
+[ext_resource path="res://assets/godette_pawn.png" type="Texture" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.69188, 0.640016, 0.372855 )
+
+[node name="Godette" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577753, -0.38216 )
+shape = SubResource( 1 )
+
+[node name="RotationOffset" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="RotationOffset"]
+transform = Transform( 0.4, -1.11759e-08, 7.45058e-08, -1.86844e-08, 0.4, -4.47035e-08, 1.93237e-08, 5.96046e-08, 0.4, 0, 0.804995, 1.19209e-07 )
+alpha_cut = 2
+texture = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="RotationOffset/Sprite3D"]
+transform = Transform( 2.5, 2.38419e-07, -2.38419e-07, -5.96046e-08, 2.5, -1.66893e-06, 0, 1.37091e-06, 2.5, 5.48363e-06, -3.35225, 33.8776 )
+projection = 1
+current = true
+size = 10.0
+

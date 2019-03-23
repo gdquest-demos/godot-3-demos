@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 8, 1, 8 )
+
+[sub_resource type="SpatialMaterial" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+material = SubResource( 2 )
+size = Vector3( 16, 2, 16 )
+
+[sub_resource type="SpatialMaterial" id=4]
+
+[node name="Box" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
