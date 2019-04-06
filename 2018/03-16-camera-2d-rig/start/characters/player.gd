@@ -9,14 +9,14 @@ enum STATES { IDLE, MOVE }
 var state = null
 
 func _ready():
-	_change_state(IDLE)
+	_change_state(STATES.IDLE)
 
 
 func _change_state(new_state):
 	match new_state:
-		IDLE:
+		STATES.IDLE:
 			$AnimationPlayer.play('idle')
-		MOVE:
+		STATES.MOVE:
 			$AnimationPlayer.play('walk')
 	state = new_state
 
@@ -25,11 +25,11 @@ func _physics_process(delta):
 	var input_direction = get_input_direction()
 	update_look_direction(input_direction)
 
-	if state == IDLE and input_direction:
-		_change_state(MOVE)
-	elif state == MOVE:
+	if state == STATES.IDLE and input_direction:
+		_change_state(STATES.MOVE)
+	elif state == STATES.MOVE:
 		if not input_direction:
-			_change_state(IDLE)
+			_change_state(STATES.IDLE)
 			return
 		var speed = MAX_RUN_SPEED if Input.is_action_pressed("run") else MAX_WALK_SPEED
 		move(speed, input_direction)
