@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Waypoints.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MovingPlatform.tscn" type="PackedScene" id=2]
+
+[node name="Game" type="Node"]
+
+[node name="Waypoints" parent="." instance=ExtResource( 1 )]
+position = Vector2( 218, 181 )
+triangle_color = Color( 0.492188, 0.833375, 1, 1 )
+
+[node name="Start" parent="Waypoints" index="0"]
+position = Vector2( -50, -40 )
+
+[node name="1" type="Position2D" parent="Waypoints"]
+position = Vector2( 596, 17 )
+
+[node name="2" type="Position2D" parent="Waypoints"]
+position = Vector2( 505, 330 )
+
+[node name="3" type="Position2D" parent="Waypoints"]
+position = Vector2( 14, 263 )
+
+[node name="MovingPlatform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 692.629, 187.291 )
+waypoints_path = NodePath("../Waypoints")
+
+
+[editable path="Waypoints"]
+
+[editable path="MovingPlatform"]
