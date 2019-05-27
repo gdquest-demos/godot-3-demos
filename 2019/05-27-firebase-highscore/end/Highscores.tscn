@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Highscores.gd" type="Script" id=1]
+[ext_resource path="res://interface/ScoreRow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interface/fonts/montserrat_eb_128.tres" type="DynamicFont" id=3]
+[ext_resource path="res://interface/fonts/montserrat_eb_64.tres" type="DynamicFont" id=4]
+
+[node name="Highscores" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 25.0
+margin_right = -25.0
+margin_bottom = -25.0
+script = ExtResource( 1 )
+score_row = ExtResource( 2 )
+
+[node name="Column" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 25
+
+[node name="Title" type="Label" parent="Column"]
+margin_right = 1870.0
+margin_bottom = 157.0
+custom_fonts/font = ExtResource( 3 )
+text = "HIGHSCORES"
+align = 1
+
+[node name="Form" type="HBoxContainer" parent="Column"]
+margin_top = 182.0
+margin_right = 1870.0
+margin_bottom = 271.0
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Column/Form"]
+margin_left = 339.0
+margin_top = 5.0
+margin_right = 705.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 4 )
+text = "Nickname:"
+
+[node name="LineEdit" type="LineEdit" parent="Column/Form"]
+margin_left = 730.0
+margin_right = 1230.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = ExtResource( 4 )
+
+[node name="FormButton" type="Button" parent="Column/Form"]
+margin_left = 1255.0
+margin_right = 1531.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 4 )
+disabled = true
+text = "SUBMIT"
+
+[node name="Headers" type="HBoxContainer" parent="Column"]
+editor/display_folded = true
+margin_top = 296.0
+margin_right = 1870.0
+margin_bottom = 375.0
+
+[node name="Player" type="Label" parent="Column/Headers"]
+margin_right = 933.0
+margin_bottom = 79.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 4 )
+text = "Player"
+align = 1
+uppercase = true
+
+[node name="Score" type="Label" parent="Column/Headers"]
+margin_left = 937.0
+margin_right = 1870.0
+margin_bottom = 79.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 4 )
+text = "Score"
+align = 1
+uppercase = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Column/Form/FormButton" to="." method="_on_FormButton_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
