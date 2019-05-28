@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://interface/fonts/montserrat_eb_128.tres" type="DynamicFont" id=1]
+
+[node name="Title" type="Label"]
+margin_right = 1870.0
+margin_bottom = 157.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 1, 0.439216, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+align = 1
+valign = 1
+

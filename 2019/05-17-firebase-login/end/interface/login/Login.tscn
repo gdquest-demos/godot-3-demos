@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interface/login/Login.gd" type="Script" id=1]
+[ext_resource path="res://interface/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interface/fonts/montserrat_eb_64.tres" type="DynamicFont" id=3]
+
+[node name="Login" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Container" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 25.0
+margin_right = -25.0
+margin_bottom = -25.0
+custom_constants/separation = 50
+
+[node name="Title" parent="Container" instance=ExtResource( 2 )]
+text = "LOGIN SCREEN"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Container"]
+margin_top = 207.0
+margin_right = 1870.0
+margin_bottom = 500.0
+custom_constants/separation = 15
+
+[node name="Username" type="HBoxContainer" parent="Container/VBoxContainer2"]
+editor/display_folded = true
+margin_left = 535.0
+margin_right = 1335.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 800, 0 )
+size_flags_horizontal = 4
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Container/VBoxContainer2/Username"]
+margin_top = 5.0
+margin_right = 387.0
+margin_bottom = 84.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Username:"
+align = 2
+
+[node name="LineEdit" type="LineEdit" parent="Container/VBoxContainer2/Username"]
+margin_left = 412.0
+margin_right = 800.0
+margin_bottom = 89.0
+size_flags_horizontal = 11
+custom_fonts/font = ExtResource( 3 )
+caret_blink = true
+
+[node name="Password" type="HBoxContainer" parent="Container/VBoxContainer2"]
+margin_left = 535.0
+margin_top = 104.0
+margin_right = 1335.0
+margin_bottom = 193.0
+rect_min_size = Vector2( 800, 0 )
+size_flags_horizontal = 4
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Container/VBoxContainer2/Password"]
+margin_top = 5.0
+margin_right = 387.0
+margin_bottom = 84.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Password:"
+align = 2
+
+[node name="LineEdit" type="LineEdit" parent="Container/VBoxContainer2/Password"]
+margin_left = 412.0
+margin_right = 800.0
+margin_bottom = 89.0
+size_flags_horizontal = 11
+custom_fonts/font = ExtResource( 3 )
+secret = true
+caret_blink = true
+
+[node name="LoginButton" type="Button" parent="Container/VBoxContainer2"]
+margin_left = 821.0
+margin_top = 208.0
+margin_right = 1049.0
+margin_bottom = 293.0
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 3 )
+text = "LOGIN"
+
+[node name="Notification" type="Label" parent="Container"]
+margin_top = 550.0
+margin_right = 1870.0
+margin_bottom = 629.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
+align = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Container/VBoxContainer2/LoginButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
