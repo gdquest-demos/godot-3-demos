@@ -12,3 +12,4 @@ script = ExtResource( 1 )
 
 [node name="Grid Visualizer" type="Node2D" parent="Grid"]
 script = ExtResource( 2 )
+

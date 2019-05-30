@@ -17,7 +17,7 @@ var grid
 
 func _ready():
 	grid = get_parent()
-	type = grid.ENTITY_TYPES.PLAYER
+	type = grid.PLAYER
 	set_process(true)
 
 

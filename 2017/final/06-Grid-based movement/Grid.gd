@@ -1,7 +1,7 @@
 # Collection of functions to work with a Grid. Stores all its children in the grid array
 extends TileMap
 
-enum ENTITY_TYPES {EMPTY, PLAYER, OBSTACLE, COLLECTIBLE}
+enum {EMPTY, PLAYER, OBSTACLE, COLLECTIBLE}
 
 var tile_size = get_cell_size()
 var half_tile_size = tile_size / 2
@@ -17,12 +17,12 @@ func _ready():
 	for x in range(grid_size.x):
 		grid.append([])
 		for y in range(grid_size.y):
-			grid[x].append(ENTITY_TYPES.EMPTY)
+			grid[x].append(EMPTY)
 
 	# Player
 	var new_player = Player.instance()
 	new_player.position = map_to_world(PLAYER_STARTPOS) + half_tile_size
-	grid[PLAYER_STARTPOS.x][PLAYER_STARTPOS.y] = ENTITY_TYPES.PLAYER
+	grid[PLAYER_STARTPOS.x][PLAYER_STARTPOS.y] = PLAYER
 	add_child(new_player)
 
 	# Obstacles
@@ -39,7 +39,7 @@ func _ready():
 	for pos in positions:
 		var new_obstacle = Obstacle.instance()
 		new_obstacle.position = map_to_world(pos) + half_tile_size
-		grid[pos.x][pos.y] = ENTITY_TYPES.OBSTACLE
+		grid[pos.x][pos.y] = OBSTACLE
 		add_child(new_obstacle)
 
 
@@ -55,7 +55,7 @@ func is_cell_vacant(this_grid_pos=Vector2(), direction=Vector2()):
 	if target_grid_pos.x < grid_size.x and target_grid_pos.x >= 0:
 		if target_grid_pos.y < grid_size.y and target_grid_pos.y >= 0:
 			# If within grid return true if target cell is empty
-			return true if grid[target_grid_pos.x][target_grid_pos.y] == ENTITY_TYPES.EMPTY else false
+			return true if grid[target_grid_pos.x][target_grid_pos.y] == EMPTY else false
 	return false
 
 
@@ -67,7 +67,7 @@ func update_child_pos(this_world_pos, direction, type):
 	var new_grid_pos = this_grid_pos + direction
 
 	# remove player from current grid location
-	grid[this_grid_pos.x][this_grid_pos.y] = ENTITY_TYPES.EMPTY
+	grid[this_grid_pos.x][this_grid_pos.y] = EMPTY
 
 	# place player on new grid location
 	grid[new_grid_pos.x][new_grid_pos.y] = type
