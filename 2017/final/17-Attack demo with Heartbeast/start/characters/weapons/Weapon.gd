@@ -4,7 +4,7 @@ signal attack_finished
 
 onready var animation_player = $AnimationPlayer
 
-enum STATES {IDLE, ATTACK}
+enum {IDLE, ATTACK}
 var current_state = IDLE
 
 export(int) var damage = 1

@@ -2,7 +2,7 @@ extends Position2D
 
 export(float) var SPEED = 200.0
 
-enum STATES { IDLE, FOLLOW }
+enum { IDLE, FOLLOW }
 var _state = null
 
 var path = []

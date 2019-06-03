@@ -8,7 +8,7 @@ var look_direction = Vector2(1, 0)
 var last_move_direction = Vector2(1, 0)
 
 
-enum STATES { IDLE, ATTACK }
+enum { IDLE, ATTACK }
 var state = null
 
 export(String) var weapon_scene_path = ''

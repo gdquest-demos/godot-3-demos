@@ -7,7 +7,7 @@ const MAX_SPEED = 400
 
 var size
 
-enum Direction {TOP, RIGHT, DOWN, LEFT}
+enum {TOP, RIGHT, DOWN, LEFT}
 
 func _ready():
 	var sprite = get_node("Sprite")

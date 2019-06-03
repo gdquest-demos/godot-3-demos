@@ -11,7 +11,7 @@ var size
 signal move
 var camera
 
-enum Direction {TOP, RIGHT, DOWN, LEFT}
+enum {TOP, RIGHT, DOWN, LEFT}
 
 
 func _ready():

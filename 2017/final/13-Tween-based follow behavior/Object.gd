@@ -9,7 +9,7 @@ var target_pos = Vector2()
 onready var TweenNode = get_node("Tween")
 onready var Player = get_tree().get_root().get_node("./Game/Player")
 
-enum STATES {IDLE, PREPARE, ATTACK, REST}
+enum {IDLE, PREPARE, ATTACK, REST}
 var state = IDLE
 
 const REST_TIME = 1.0

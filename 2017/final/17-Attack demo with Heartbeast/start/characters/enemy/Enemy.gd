@@ -4,7 +4,7 @@ export(int) var patrol_distance = 200
 var start_position = Vector2()
 var end_position = Vector2()
 
-enum STATES_MIND {WAIT, MOVE, ACT}
+enum {WAIT, MOVE, ACT}
 var current_mind_state = WAIT
 var previous_mind_state = null
 

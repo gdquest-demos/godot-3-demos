@@ -10,7 +10,7 @@ var weapon_path = ""
 
 onready var animation_player = $AnimationPlayer
 
-enum STATES {IDLE, WALK, ATTACK, STAGGER, DIE, DEAD}
+enum {IDLE, WALK, ATTACK, STAGGER, DIE, DEAD}
 var current_state = null
 var previous_state = null
 

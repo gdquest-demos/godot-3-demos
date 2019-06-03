@@ -11,7 +11,7 @@ var end_position = Vector2()
 var patrol_direction = Vector2()
 var patrol_distance = 0.0
 
-enum STATES_MIND { WAIT, MOVE }
+enum { WAIT, MOVE }
 var state = null
 var previous_state = null
 

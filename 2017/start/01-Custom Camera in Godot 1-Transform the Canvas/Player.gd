@@ -6,7 +6,7 @@ var velocity = Vector2()
 const MAX_SPEED = 400
 
 
-enum Direction {TOP, RIGHT, DOWN, LEFT}
+enum {TOP, RIGHT, DOWN, LEFT}
 
 func _ready():
 	set_fixed_process(true)
