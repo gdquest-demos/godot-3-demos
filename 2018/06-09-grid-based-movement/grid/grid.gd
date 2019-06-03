@@ -1,6 +1,6 @@
 extends TileMap
 
-enum CELL_TYPES { EMPTY = -1, ACTOR, OBSTACLE, OBJECT}
+enum { EMPTY = -1, ACTOR, OBSTACLE, OBJECT}
 
 func get_cell_pawn(coordinates):
 	for node in get_children():
