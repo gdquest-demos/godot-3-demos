@@ -1,7 +1,7 @@
 # Collection of functions to work with a Grid. Stores all its children in the grid array
 extends TileMap
 
-enum ENTITY_TYPES {PLAYER, OBSTACLE, COLLECTIBLE}
+enum {PLAYER, OBSTACLE, COLLECTIBLE}
 
 var tile_size = get_cell_size()
 # The map_to_world function returns the position of the tile's top left corner in isometric space,

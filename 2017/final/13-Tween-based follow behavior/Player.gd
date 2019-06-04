@@ -9,7 +9,7 @@ var velocity = Vector2()
 export(int) var max_health = 6
 
 
-enum STATES {IDLE, WALKING}
+enum {IDLE, WALKING}
 var state = IDLE
 
 

@@ -8,7 +8,7 @@ const MAX_SPEED = 400
 
 signal move
 
-enum Direction {TOP, RIGHT, DOWN, LEFT}
+enum {TOP, RIGHT, DOWN, LEFT}
 
 
 func _ready():

@@ -7,7 +7,7 @@ var Enemy = preload("res://scenes/Enemy.tscn")
 const MAX_SPAWN_INTERVAL = 3
 const MIN_SPAWN_INTERVAL = 1.5
 
-enum Direction { TOP_BOTTOM, BOTTOM_TOP, LEFT_RIGHT, RIGHT_LEFT } 
+enum { TOP_BOTTOM, BOTTOM_TOP, LEFT_RIGHT, RIGHT_LEFT } 
 export(Direction) var direction
 
 func _ready():

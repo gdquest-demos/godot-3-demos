@@ -5,7 +5,7 @@ var look_direction = Vector2(1, 0)
 const MAX_WALK_SPEED = 450
 const MAX_RUN_SPEED = 700
 
-enum STATES { IDLE, MOVE }
+enum { IDLE, MOVE }
 var state = null
 
 func _ready():

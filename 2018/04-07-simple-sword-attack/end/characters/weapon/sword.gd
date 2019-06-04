@@ -2,7 +2,7 @@ extends Area2D
 
 signal attack_finished
 
-enum STATES { IDLE, ATTACK }
+enum { IDLE, ATTACK }
 var state = null
 
 

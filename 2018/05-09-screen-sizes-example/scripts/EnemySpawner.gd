@@ -1,6 +1,6 @@
 extends Node2D
 
-enum DIRECTIONS { TOP_BOTTOM, BOTTOM_TOP, LEFT_RIGHT, RIGHT_LEFT } 
+enum { TOP_BOTTOM, BOTTOM_TOP, LEFT_RIGHT, RIGHT_LEFT } 
 export(DIRECTIONS) var direction
 
 export(float) var MINIMUM_SPAWN_INTERVAL = 1.5
