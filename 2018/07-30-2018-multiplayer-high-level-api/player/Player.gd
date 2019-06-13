@@ -3,7 +3,7 @@ extends KinematicBody2D
 const MOVE_SPEED = 10.0
 const MAX_HP = 100
 
-enum { UP, DOWN, LEFT, RIGHT, NONE }
+enum MoveDirection { UP, DOWN, LEFT, RIGHT, NONE }
 
 slave var slave_position = Vector2()
 slave var slave_movement = MoveDirection.NONE
