@@ -1,0 +1,373 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/theme/gdquest.theme" type="Theme" id=1]
+[ext_resource path="res://src/Panel.gd" type="Script" id=2]
+[ext_resource path="res://assets/shadow.png" type="Texture" id=3]
+[ext_resource path="res://assets/player.png" type="Texture" id=4]
+[ext_resource path="res://assets/dummy.png" type="Texture" id=5]
+[ext_resource path="res://assets/bar/background.png" type="Texture" id=6]
+[ext_resource path="res://assets/bar/fill.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.152941, 0.168627, 0.188235, 0.65098 )
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[node name="Panel" type="Panel"]
+margin_top = 350.0
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="LabelInput" type="Label" parent="."]
+margin_left = 119.0
+margin_top = 107.056
+margin_right = 175.0
+margin_bottom = 133.056
+custom_styles/normal = SubResource( 11 )
+text = "input"
+align = 1
+
+[node name="Line2DInputPlayer" type="Line2D" parent="."]
+position = Vector2( 0, -16.9442 )
+points = PoolVector2Array( 180, 140, 250, 140 )
+width = 2.0
+default_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="PanelPlayer" type="Panel" parent="."]
+editor/display_folded = true
+margin_left = 250.0
+margin_top = 25.0
+margin_right = 360.0
+margin_bottom = 195.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 12 )
+
+[node name="PlayerRepresentation" type="Position2D" parent="PanelPlayer"]
+editor/display_folded = true
+position = Vector2( 55, 155 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Shadow" type="Sprite" parent="PanelPlayer/PlayerRepresentation"]
+modulate = Color( 1, 1, 1, 0.5 )
+position = Vector2( 0, -10 )
+texture = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="PanelPlayer/PlayerRepresentation"]
+texture = ExtResource( 4 )
+offset = Vector2( 0, -72 )
+
+[node name="SocketOut" type="Polygon2D" parent="PanelPlayer"]
+position = Vector2( 108.512, 23.4305 )
+scale = Vector2( 1.14882, 1.05493 )
+color = Color( 0.203922, 0.211765, 0.227451, 1 )
+polygon = PoolVector2Array( 0, -5, 10, -5, 10, 5, 0, 5 )
+
+[node name="LabelAttacked" type="Label" parent="PanelPlayer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 99.0
+margin_bottom = 36.0
+custom_styles/normal = SubResource( 3 )
+text = "attacked"
+align = 1
+
+[node name="Line2DAttacked" type="Line2D" parent="PanelPlayer"]
+position = Vector2( 250, 0 )
+z_index = 1
+points = PoolVector2Array( -148, 23, -136, 23 )
+width = 2.0
+default_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2DPlayerDummy" type="Line2D" parent="."]
+z_index = 1
+points = PoolVector2Array( 364.233, 47.9272, 494.339, 203.594 )
+width = 2.0
+default_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="PanelDummy" type="Panel" parent="."]
+editor/display_folded = true
+margin_left = 500.0
+margin_top = 25.0
+margin_right = 618.0
+margin_bottom = 220.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 4 )
+
+[node name="DummyRepresentation" type="Position2D" parent="PanelDummy"]
+position = Vector2( 60, 155 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Shadow" type="Sprite" parent="PanelDummy/DummyRepresentation"]
+modulate = Color( 1, 1, 1, 0.5 )
+position = Vector2( 0, -10 )
+texture = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="PanelDummy/DummyRepresentation"]
+texture = ExtResource( 5 )
+offset = Vector2( 0, -71 )
+
+[node name="SocketIn" type="Polygon2D" parent="PanelDummy"]
+position = Vector2( -10.054, 178.924 )
+scale = Vector2( 1.14882, 1.05493 )
+color = Color( 0.203922, 0.211765, 0.227451, 1 )
+polygon = PoolVector2Array( 0, -5, 10, -5, 10, 5, 0, 5 )
+
+[node name="SocketOut" type="Polygon2D" parent="PanelDummy"]
+position = Vector2( 116.677, 22.8087 )
+scale = Vector2( 1.14882, 1.05493 )
+color = Color( 0.203922, 0.211765, 0.227451, 1 )
+polygon = PoolVector2Array( 0, -5, 10, -5, 10, 5, 0, 5 )
+
+[node name="LabelDamaged" type="Label" parent="PanelDummy"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 99.0
+margin_bottom = 36.0
+custom_styles/normal = SubResource( 5 )
+text = "damaged"
+align = 1
+
+[node name="Line2DDamaged" type="Line2D" parent="PanelDummy"]
+position = Vector2( 8.09711, 0 )
+z_index = 1
+points = PoolVector2Array( 102, 23, 114, 23 )
+width = 2.0
+default_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="LabelOnAttacked" type="Label" parent="PanelDummy"]
+margin_left = 8.0
+margin_top = 170.0
+margin_right = 180.0
+margin_bottom = 199.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_styles/normal = SubResource( 6 )
+text = "on attacked"
+align = 1
+
+[node name="Line2DOnAttacked" type="Line2D" parent="PanelDummy"]
+position = Vector2( 0, 156.004 )
+z_index = 1
+points = PoolVector2Array( -6, 23, 6, 23 )
+width = 2.0
+default_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2DDummyPlayerUI" type="Line2D" parent="."]
+z_index = 1
+points = PoolVector2Array( 622.53, 47.9061, 744.208, 143.829 )
+width = 2.0
+default_color = Color( 0.203922, 0.211765, 0.227451, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="PanelPlayerUI" type="Panel" parent="."]
+margin_left = 750.0
+margin_top = 67.857
+margin_right = 896.0
+margin_bottom = 159.857
+mouse_filter = 2
+custom_styles/panel = SubResource( 7 )
+
+[node name="SocketIn" type="Polygon2D" parent="PanelPlayerUI"]
+position = Vector2( -10.054, 75.7339 )
+scale = Vector2( 1.14882, 1.05493 )
+color = Color( 0.203922, 0.211765, 0.227451, 1 )
+polygon = PoolVector2Array( 0, -5, 10, -5, 10, 5, 0, 5 )
+
+[node name="LabelOnDamaged" type="Label" parent="PanelPlayerUI"]
+margin_left = 8.0
+margin_top = 67.0
+margin_right = 225.0
+margin_bottom = 96.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_styles/normal = SubResource( 8 )
+text = "on damaged"
+align = 1
+
+[node name="Line2DOnDamaged" type="Line2D" parent="PanelPlayerUI"]
+position = Vector2( 0, 52.8143 )
+z_index = 1
+points = PoolVector2Array( -6, 23, 6, 23 )
+width = 2.0
+default_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+texture_mode = 3080292
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="PlayerUIRepresentation" type="PanelContainer" parent="PanelPlayerUI"]
+editor/display_folded = true
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 277.0
+margin_bottom = 97.0
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 9 )
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelPlayerUI/PlayerUIRepresentation"]
+margin_right = 272.0
+margin_bottom = 92.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 256.0
+margin_bottom = 76.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer/VBoxContainer"]
+margin_right = 240.0
+margin_bottom = 26.0
+theme = ExtResource( 1 )
+text = "Player"
+
+[node name="EXPBar" type="PanelContainer" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 240.0
+margin_bottom = 60.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 10 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer/VBoxContainer/EXPBar"]
+margin_right = 240.0
+margin_bottom = 26.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer/VBoxContainer/EXPBar/HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 26.0
+theme = ExtResource( 1 )
+text = "EXP"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer/VBoxContainer/EXPBar/HBoxContainer"]
+margin_left = 48.0
+margin_right = 240.0
+margin_bottom = 26.0
+mouse_filter = 2
+
+[node name="TextureProgress" type="TextureProgress" parent="PanelPlayerUI/PlayerUIRepresentation/MarginContainer/VBoxContainer/EXPBar/HBoxContainer/CenterContainer"]
+margin_top = 2.0
+margin_right = 192.0
+margin_bottom = 24.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+value = 30.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 7 )
+tint_progress = Color( 0.858824, 0.392157, 0.247059, 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+

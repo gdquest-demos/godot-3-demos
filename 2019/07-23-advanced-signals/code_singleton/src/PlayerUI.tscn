@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/theme/gdquest.theme" type="Theme" id=1]
+[ext_resource path="res://src/PlayerUI.gd" type="Script" id=2]
+[ext_resource path="res://assets/bar/background.png" type="Texture" id=3]
+[ext_resource path="res://assets/bar/fill.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.152941, 0.168627, 0.188235, 0.65098 )
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[node name="PlayerUI" type="PanelContainer"]
+editor/display_folded = true
+margin_right = 240.0
+margin_bottom = 60.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 272.0
+margin_bottom = 92.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 256.0
+margin_bottom = 76.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 240.0
+margin_bottom = 26.0
+theme = ExtResource( 1 )
+text = "Player"
+
+[node name="EXPBar" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 240.0
+margin_bottom = 60.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/EXPBar"]
+margin_right = 240.0
+margin_bottom = 26.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/EXPBar/HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 26.0
+theme = ExtResource( 1 )
+text = "EXP"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/EXPBar/HBoxContainer"]
+margin_left = 48.0
+margin_right = 240.0
+margin_bottom = 26.0
+mouse_filter = 2
+
+[node name="TextureProgress" type="TextureProgress" parent="MarginContainer/VBoxContainer/EXPBar/HBoxContainer/CenterContainer"]
+margin_top = 2.0
+margin_right = 192.0
+margin_bottom = 24.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+tint_progress = Color( 0.858824, 0.392157, 0.247059, 1 )
+
