@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Signals.gd" type="Script" id=1]
+[ext_resource path="res://src/PlayerUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Dummy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Panel.tscn" type="PackedScene" id=5]
+
+[node name="Signals" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="PlayerUI" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Dummy" parent="." instance=ExtResource( 4 )]
+
+[node name="Panel" parent="." instance=ExtResource( 5 )]
+
