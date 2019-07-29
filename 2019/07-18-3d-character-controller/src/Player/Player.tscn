@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://src/Player/Camera/Camera.gd" type="Script" id=2]
+[ext_resource path="res://src/Player/PlayerMesh.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/StateMachine/StateMachine.gd" type="Script" id=4]
+[ext_resource path="res://src/StateMachine/States/Move.gd" type="Script" id=5]
+[ext_resource path="res://src/StateMachine/States/Idle.gd" type="Script" id=6]
+[ext_resource path="res://src/StateMachine/States/Air.gd" type="Script" id=7]
+[ext_resource path="res://src/StateMachine/States/Run.gd" type="Script" id=8]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.25
+height = 1.5239
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.999937, 0.00679257, -0.00893151, 0, 0.795964, 0.605344, 0.011221, -0.605306, 0.795914, -0.0556007, 4.28101, 4.9547 )
+current = true
+script = ExtResource( 2 )
+
+[node name="PlayerMesh" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0 )
+shape = SubResource( 1 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 4 )
+initial_state = NodePath("Move/Idle")
+
+[node name="Move" type="Node" parent="StateMachine"]
+script = ExtResource( 5 )
+
+[node name="Idle" type="Node" parent="StateMachine/Move"]
+editor/display_folded = true
+script = ExtResource( 6 )
+
+[node name="JumpDelay" type="Timer" parent="StateMachine/Move/Idle"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Air" type="Node" parent="StateMachine/Move"]
+editor/display_folded = true
+script = ExtResource( 7 )
+
+[node name="JumpDelay" type="Timer" parent="StateMachine/Move/Air"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Run" type="Node" parent="StateMachine/Move"]
+script = ExtResource( 8 )
+
+[connection signal="transitioned" from="StateMachine" to="PlayerMesh" method="_on_StateMachine_transitioned"]

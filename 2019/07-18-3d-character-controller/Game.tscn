@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0.537255, 0.8, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+size = Vector2( 100, 100 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, -50 )
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 1, 0.321569, 0.321569, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[sub_resource type="ConvexPolygonShape" id=8]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[node name="Game" type="Node"]
+
+[node name="TestMap" type="Spatial" parent="."]
+
+[node name="Ground" type="MeshInstance" parent="TestMap"]
+editor/display_folded = true
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Ground"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Ground/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="Obstacles" type="Spatial" parent="TestMap"]
+editor/display_folded = true
+
+[node name="MeshInstance" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -8 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -9 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance4/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance5/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -2 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance6/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance7" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -4 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance7/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance8" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, -6 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance8/StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -2 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance2/StaticBody"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="TestMap/Obstacles"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, -11 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="TestMap/Obstacles/MeshInstance3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="TestMap/Obstacles/MeshInstance3/StaticBody"]
+shape = SubResource( 8 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.766044, 0.166366, -0.620885, 0.271654, 0.791635, 0.547283, 0.582563, -0.587909, 0.561234, 0, 12, 0 )
+shadow_enabled = true
+
