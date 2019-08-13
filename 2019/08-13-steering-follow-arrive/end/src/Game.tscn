@@ -1,12 +1,39 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/Agents/Triangle.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Agents/Circle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/graph-paper.svg" type="Texture" id=1]
+[ext_resource path="res://src/Agents/Target.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Agents/Triangle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Agents/Circle.tscn" type="PackedScene" id=4]
 
 [node name="Game" type="Node2D"]
 
-[node name="Triangle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 209, 174 )
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1035.0
+margin_bottom = 600.0
+mouse_filter = 2
+color = Color( 0.160784, 0.435294, 0.866667, 1 )
 
-[node name="Circle" parent="." instance=ExtResource( 2 )]
-position = Vector2( 583, 224 )
+[node name="Background" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.439216 )
+position = Vector2( 573.389, 318.125 )
+scale = Vector2( 0.885764, 0.885764 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[node name="Target" parent="." instance=ExtResource( 2 )]
+position = Vector2( 548, 325 )
+
+[node name="Triangle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 281, 226 )
+
+[node name="Circle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 765, 327 )
+
+[node name="Circle2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 570, 142 )
+
+[node name="Circle3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 248, 421 )
