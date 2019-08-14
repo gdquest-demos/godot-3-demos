@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Agents/Target.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Agents/CharacterArriveTo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Agents/CharacterFollow.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Agents/Circle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Circle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/graph-paper.svg" type="Texture" id=5]
 
 [node name="Game" type="Node2D"]
