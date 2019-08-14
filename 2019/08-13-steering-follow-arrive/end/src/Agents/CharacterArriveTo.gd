@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 
 onready var sprite: Sprite = $TriangleRed
+onready var camera: Camera2D = $Camera2D
 
 const DISTANCE_THRESHOLD: = 3.0
 
@@ -15,6 +16,8 @@ var _is_following: = false
 
 func _ready() -> void:
 	set_physics_process(false)
+	camera.set_as_toplevel(true)
+	camera.global_position = global_position
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -23,6 +26,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("click"):
+		self.target_global_position = get_global_mouse_position()
 	if global_position.distance_to(target_global_position) < DISTANCE_THRESHOLD:
 		set_physics_process(false)
 	_velocity = Steering.arrive_to(
@@ -37,4 +42,5 @@ func _physics_process(delta: float) -> void:
 
 func set_target_global_position(value: Vector2) -> void:
 	target_global_position = value
+	camera.global_position = value
 	set_physics_process(true)
