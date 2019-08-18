@@ -28,24 +28,21 @@ position = Vector2( 1601.66, 279.265 )
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 977.614, 770.489 )
 
-[node name="Barricade" type="Node2D" parent="YSort"]
-editor/display_folded = true
-
-[node name="Barricade" parent="YSort/Barricade" instance=ExtResource( 6 )]
+[node name="Barricade2" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 1828, 500 )
 
-[node name="Barricade5" parent="YSort/Barricade" instance=ExtResource( 6 )]
+[node name="Barricade5" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 1636.72, 500 )
 
-[node name="Barricade2" parent="YSort/Barricade" instance=ExtResource( 6 )]
+[node name="Barricade3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 1764, 500 )
 
-[node name="Barricade6" parent="YSort/Barricade" instance=ExtResource( 6 )]
+[node name="Barricade6" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 1572.72, 500 )
 
-[node name="Barricade3" parent="YSort/Barricade" instance=ExtResource( 6 )]
+[node name="Barricade4" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 1700, 500 )
 
-[node name="Barricade4" parent="YSort/Barricade" instance=ExtResource( 6 )]
+[node name="Barricade7" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 1508.72, 500 )
-[connection signal="make_hit_effect" from="YSort/Player" to="." method="_on_Player_make_hit_effect"]
+[connection signal="shot_bullet" from="YSort/Player" to="." method="_on_Player_shot_bullet"]
