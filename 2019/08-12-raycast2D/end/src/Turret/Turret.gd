@@ -13,8 +13,6 @@ export var rotation_speed: = 100
 export var turret_shot: PackedScene
 
 
-var colliding:= false
-var hit_point:= Vector2.ZERO
 var can_shoot:= true
 
 

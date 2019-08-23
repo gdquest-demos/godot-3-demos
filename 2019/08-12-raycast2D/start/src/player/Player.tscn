@@ -25,8 +25,7 @@ texture = ExtResource( 2 )
 [node name="HurtBox" type="Area2D" parent="." groups=[
 "Player",
 ]]
-editor/display_folded = true
-collision_mask = 8
+collision_mask = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 self_modulate = Color( 0.85098, 0, 1, 1 )

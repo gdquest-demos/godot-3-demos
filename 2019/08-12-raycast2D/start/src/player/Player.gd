@@ -1,7 +1,6 @@
 extends KinematicBody2D
 """
-Player-controled character. Moves in 4 direction and 
-gets knocked back when it takes damage.
+Player-controled character. Moves in 4 directions
 """
 
 export var speed: = 500.0
@@ -11,7 +10,7 @@ func _process(delta):
 	move()
 
 
-func move():
+func move()->void:
 	var direction: = Vector2.ZERO
 	direction = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"),

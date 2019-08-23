@@ -9,6 +9,7 @@ extents = Vector2( 48, 16 )
 extents = Vector2( 48, 20 )
 
 [node name="Target" type="StaticBody2D"]
+collision_layer = 8
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
@@ -19,6 +20,7 @@ position = Vector2( 0, 32 )
 shape = SubResource( 1 )
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 0, -20 )

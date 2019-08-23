@@ -68,7 +68,7 @@ fire={
 2d_physics/layer_1="player"
 2d_physics/layer_2="target"
 2d_physics/layer_3="turret"
-2d_physics/layer_4="enemy"
+2d_physics/layer_4="environment"
 
 [rendering]
 
