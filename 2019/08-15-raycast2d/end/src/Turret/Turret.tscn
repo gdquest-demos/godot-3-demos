@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Turret/Turret.gd" type="Script" id=1]
+[ext_resource path="res://src/Turret Shot/TurretShot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/arrow.png" type="Texture" id=3]
+[ext_resource path="res://assets/turret.png" type="Texture" id=4]
+[ext_resource path="res://src/Hitbox/Hitbox.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 16 )
+
+[node name="Turret" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+turret_shot = ExtResource( 2 )
+
+[node name="Pointer" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Pointer"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Pointer"]
+enabled = true
+cast_to = Vector2( 800, 0 )
+collision_mask = 11
+collide_with_areas = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -48 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -12 )
+shape = SubResource( 1 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 5 )]
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+[connection signal="timeout" from="ShotTimer" to="." method="_on_ShotTimer_timeout"]
