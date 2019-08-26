@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://src/Player/Camera.gd" type="Script" id=2]
 [ext_resource path="res://src/HUD/CanvasLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/dark-shoot.wav" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.4
@@ -36,6 +37,7 @@ collide_with_areas = true
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
 [connection signal="cam_x" from="." to="CanvasLayer" method="_on_Player_cam_x"]
 [connection signal="cam_y" from="." to="CanvasLayer" method="_on_Player_cam_y"]
 [connection signal="timeout" from="Camera/ShakeTimer" to="Camera" method="_on_ShakeTimer_timeout"]

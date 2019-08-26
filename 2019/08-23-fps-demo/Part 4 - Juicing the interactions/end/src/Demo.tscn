@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Demo.gd" type="Script" id=1]
 [ext_resource path="res://src/effects/hitDecal3D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/effects/ShootParticle.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/DemoEnvironment.tres" type="Environment" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 50, 1, 50 )
@@ -36,6 +37,7 @@ collision_layer = 2
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
+use_in_baked_light = true
 mesh = SubResource( 2 )
 material/0 = null
 
@@ -48,6 +50,7 @@ collision_layer = 2
 shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Reference1"]
+use_in_baked_light = true
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
@@ -60,6 +63,7 @@ collision_layer = 2
 shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Reference2"]
+use_in_baked_light = true
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
@@ -72,6 +76,7 @@ collision_layer = 2
 shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Reference3"]
+use_in_baked_light = true
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
@@ -84,9 +89,52 @@ collision_layer = 2
 shape = SubResource( 3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Reference4"]
+use_in_baked_light = true
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1612, 12.3324 )
+
+[node name="Lighting" type="Spatial" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Lighting"]
+transform = Transform( -0.461846, 0.615026, -0.639094, -0.186166, 0.637276, 0.747811, 0.867203, 0.464351, -0.179827, 0, 26.005, 0 )
+light_color = Color( 0.847059, 0.690196, 0.466667, 1 )
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="GIProbe" type="GIProbe" parent="Lighting"]
+extents = Vector3( 73.0007, 29.6759, 60.0894 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = ExtResource( 5 )
+
+[node name="OmniLight" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14901, 5.20605, 25.789 )
+light_color = Color( 0.0431373, 0.85098, 0.701961, 1 )
+light_energy = 2.13
+light_indirect_energy = 5.22
+omni_range = 6.5
+
+[node name="OmniLight2" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9533, 5.20605, 25.789 )
+light_color = Color( 0.85098, 0.403922, 0.0431373, 1 )
+light_energy = 2.13
+light_indirect_energy = 5.22
+omni_range = 6.5
+
+[node name="OmniLight3" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9533, 5.20605, 0.100538 )
+light_color = Color( 0.0431373, 0.247059, 0.85098, 1 )
+light_energy = 2.13
+light_indirect_energy = 5.22
+omni_range = 6.5
+
+[node name="OmniLight4" type="OmniLight" parent="Lighting"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.862825, 5.20605, 0.100538 )
+light_color = Color( 0.85098, 0.0431373, 0.592157, 1 )
+light_energy = 2.13
+light_indirect_energy = 5.22
+omni_range = 6.5
 [connection signal="shot_fired" from="Player" to="." method="_on_Player_shot_fired"]

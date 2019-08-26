@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dark-shoot.wav-b7f31b9c37d69bb986beee701dc41a37.sample"
+
+[deps]
+
+source_file="res://art/dark-shoot.wav"
+dest_files=[ "res://.import/dark-shoot.wav-b7f31b9c37d69bb986beee701dc41a37.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

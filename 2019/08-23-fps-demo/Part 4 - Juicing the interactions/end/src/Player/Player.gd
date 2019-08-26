@@ -40,6 +40,7 @@ var horizontal_move:= Vector3.ZERO
 
 onready var camera:= $Camera
 onready var ray:= $Camera/RayCast
+onready var sound:= $AudioStreamPlayer3D
 
 signal cam_x
 signal cam_y
@@ -107,6 +108,7 @@ func joypad_camera_rotation(delta: float)->void:
 func shoot()->void:
 	camera.screen_kick(2.5, 0.3)
 	emit_signal("shot_fired", ray.get_collision_point(), ray.get_collision_normal())
+	sound.play()
 
 
 func debug_labels()->void:
