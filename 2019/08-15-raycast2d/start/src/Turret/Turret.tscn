@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/turret.png" type="Texture" id=1]
+[ext_resource path="res://src/Hitbox/Hitbox.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 16 )
+
+[node name="Turret" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -48 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -12 )
+shape = SubResource( 1 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+[connection signal="timeout" from="ShotTimer" to="." method="_on_ShotTimer_timeout"]

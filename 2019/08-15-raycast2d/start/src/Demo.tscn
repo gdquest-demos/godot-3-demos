@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Target/Target.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Turret/Turret.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Barricade/Barricade.tscn" type="PackedScene" id=4]
+
+[node name="Demo" type="Node2D"]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Target" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 124.108, 165.047 )
+
+[node name="Target2" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 451.159, 175.74 )
+
+[node name="Target3" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 787.653, 173.468 )
+
+[node name="Turret" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 1696.63, 236.096 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 977.614, 770.489 )
+
+[node name="Barricade" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1780.41, 393.975 )
+
+[node name="Barricade2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1716.41, 393.975 )
+
+[node name="Barricade3" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1652.41, 393.975 )
+
+[node name="Barricade4" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1588.41, 393.975 )
