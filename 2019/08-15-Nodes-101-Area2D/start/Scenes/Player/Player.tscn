@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Art/Player Placeholder.png" type="Texture" id=2]
+[ext_resource path="res://Art/Context Clue Question.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 56 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+speed = 256.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 48 )
+shape = SubResource( 1 )
+
+[node name="PlayerSprite" type="Sprite" parent="."]
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 2 )
+
+[node name="HurtBox" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource( 2 )
+
+[node name="ContextClueSprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -92 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 3 )

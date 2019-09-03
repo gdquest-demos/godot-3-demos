@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/slow_zone/SlowZone.gd" type="Script" id=1]
+[ext_resource path="res://assets/color_block.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 64 )
+
+[node name="SlowZone" type="Area2D"]
+space_override = 1
+linear_damp = 0.5
+script = ExtResource( 1 )
+speed_change = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.882353, 0.552941, 0.0823529, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_SlowZone2_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_SlowZone2_body_exited"]

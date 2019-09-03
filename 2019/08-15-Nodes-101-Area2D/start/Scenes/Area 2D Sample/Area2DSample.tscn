@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Coin/Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Sign/Sign.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Spike Trap/SpikeTrap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Color Square/ColorSquare.tscn" type="PackedScene" id=5]
+
+[node name="Area2DSample" type="Node2D"]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 489.803, 271.395 )
+
+[node name="Coin" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 93.0496, 82.7107 )
+
+[node name="Sign" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 843.908, 59.4483 )
+
+[node name="SpikeTrap" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 127.943, 478.172 )
+
+[node name="ColorSquare" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 856.832, 456.201 )
