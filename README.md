@@ -2,6 +2,8 @@
 
 Here are all the Godot 3 code projects from our tutorials on the [ GDquest Youtube channel ](http://youtube.com/c/gdquest).
 
+➡ Follow us on [Twitter](https://twitter.com/NathanGDQuest) and [YouTube](https://www.youtube.com/c/gdquest/) for free game creation tutorials, tips, and news! Get one of our [Godot game creation courses](https://gdquest.mavenseed.com/) to support our work on Free Software.
+
 ![Four screenshots of the projects in Godot](https://raw.githubusercontent.com/GDquest/Godot-engine-tutorial-demos/master/img/godot-3-demos-fs8.png)
 
 ## Links
@@ -40,6 +42,5 @@ If you find bugs, feel free to [ open an issue ](issues) and to submit a Pull Re
 - Guilherme Oliveira, [ Godot instructor on Udemy ](https://www.udemy.com/godotcourse/?couponCode=LUVGODOT)
 - Henrique Campos aka [ Pigdev ](https://pigdev.itch.io/)
 - Lars Kokemohr, dean of engineering at the [school4games Berlin](http://school4games.net/)
-
 
 These demos were made possible by the 760 generous supporters who backed [Make Professional 2D Games with Godot](https://www.kickstarter.com/projects/gdquest/make-professional-2d-games-godot-engine-online-cou) on Kickstarter, and everyone who supports GDquest.
