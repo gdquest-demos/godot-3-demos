@@ -37,4 +37,3 @@ func _fixed_process(delta):
 	velocity = speed * direction.normalized() * delta
 	
 	move(velocity)
-	
