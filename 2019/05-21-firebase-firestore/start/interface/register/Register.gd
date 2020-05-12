@@ -22,4 +22,3 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		notification.text = "Registration sucessful!"
 		yield(get_tree().create_timer(2.0), "timeout")
 		get_tree().change_scene("res://interface/login/Login.tscn")
-	

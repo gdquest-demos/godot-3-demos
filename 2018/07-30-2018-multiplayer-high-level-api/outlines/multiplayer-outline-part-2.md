@@ -1,4 +1,4 @@
-﻿# Multiplayer Part 2
+# Multiplayer Part 2
 
 *Outline's Pitch: Overview of the Player Scene: how to use slaves and masters and letting clients simulate behaviors instead of syncing everything through network*
 

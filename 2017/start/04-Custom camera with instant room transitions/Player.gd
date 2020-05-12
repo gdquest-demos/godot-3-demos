@@ -54,4 +54,3 @@ func turn_towards(_direction):
 	elif _direction == RIGHT:
 		direction = Vector2(1, 0)
 		get_node("Sprite").set_flip_h(true)
-	
