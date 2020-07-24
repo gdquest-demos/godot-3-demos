@@ -96,11 +96,7 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Pivot" type="Position2D" parent="." index="2"]
-
-_sections_unfolded = [ "Transform" ]
-
-[node name="Sprite" type="Sprite" parent="Pivot" index="0"]
+[node name="Sprite" type="Sprite" parent="." index="2"]
 
 position = Vector2( 1.43051e-06, -1.90735e-06 )
 texture = ExtResource( 2 )
