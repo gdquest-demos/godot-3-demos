@@ -1,6 +1,6 @@
 # Free Godot 3 demos
 
-Here are all the Godot 3 code projects from our tutorials on the [ GDquest Youtube channel ](http://youtube.com/c/gdquest).
+Here are all the Godot 3.0 code projects from our tutorials on the [ GDquest Youtube channel ](http://youtube.com/c/gdquest).
 
 ➡ Follow us on [Twitter](https://twitter.com/NathanGDQuest) and [YouTube](https://www.youtube.com/c/gdquest/) for free game creation tutorials, tips, and news! Get one of our [Godot game creation courses](https://gdquest.mavenseed.com/) to support our work on Free Software.
 
@@ -35,7 +35,7 @@ Some projects have both a `start` and an `end` version so you can follow along w
 
 ## Contributors welcome!
 
-If you find bugs, feel free to [ open an issue ](issues) and to submit a Pull Request!
+If you find bugs, feel free to [ open an issue ](/issues/new) and to submit a Pull Request!
 
 ## Credits
 
