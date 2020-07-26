@@ -35,7 +35,7 @@ Some projects have both a `start` and an `end` version so you can follow along w
 
 ## Contributors welcome!
 
-If you find bugs, feel free to [ open an issue ](issues) and to submit a Pull Request!
+If you find bugs, feel free to [ open an issue ](https://github.com/GDQuest/godot-demos/issues) and to submit a Pull Request!
 
 ## Credits
 
