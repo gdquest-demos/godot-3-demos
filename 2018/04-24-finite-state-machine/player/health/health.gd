@@ -44,7 +44,7 @@ func take_damage(amount, effect=null):
 
 func heal(amount):
 	health += amount
-	health = max(health, max_health)
+	health = min(health, max_health)
 	emit_signal("health_changed", health)
 #	print("%s got healed by %s points. Health: %s/%s" % [get_name(), amount, health, max_health])
 
