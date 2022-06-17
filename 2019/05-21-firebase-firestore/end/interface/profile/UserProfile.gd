@@ -1,8 +1,8 @@
 extends Control
 
 onready var http : HTTPRequest = $HTTPRequest
-onready var nickname : Label = $Container/VBoxContainer2/Name/LineEdit
-onready var character_class : Label = $Container/VBoxContainer2/Class/LineEdit
+onready var nickname : LineEdit = $Container/VBoxContainer2/Name/LineEdit
+onready var character_class : LineEdit = $Container/VBoxContainer2/Class/LineEdit
 onready var notification : Label = $Container/Notification
 onready var strength : Slider = $Container/VBoxContainer2/Strength/Slider
 onready var intelligence : Slider = $Container/VBoxContainer2/Intelligence/Slider
