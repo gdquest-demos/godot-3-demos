@@ -1,0 +1,7 @@
+res://default_env.tres
+res://src/Game.tscn
+res://src/agents/characterarriveto.tscn
+res://src/autoload/streerig_Node.tscn
+res://src/ui/Target.tscn
+res://src/agents/CharacterFollow.tscn
+res://src/agents/Characterminion.tscn

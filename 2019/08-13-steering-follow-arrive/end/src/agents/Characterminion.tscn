@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgh0hf7eb058b"]
+
+[ext_resource type="Texture2D" uid="uid://bcog47jpem3ax" path="res://assets/triangle_red.png" id="1"]
+[ext_resource type="Script" path="res://src/agents/Characterminion.gd" id="2"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 28.0
+
+[node name="Characterminion" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("2")
+target_path = NodePath(".")
+
+[node name="TriangleRed" type="Sprite2D" parent="."]
+modulate = Color(0.203922, 0.156863, 0.156863, 1)
+position = Vector2(6, 0)
+texture = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")

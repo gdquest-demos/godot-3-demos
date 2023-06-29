@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://evr2rhsvq6h4"]
+
+[ext_resource type="Script" path="res://src/autoload/streerig_Node.gd" id="1"]
+
+[node name="streerig_Node" type="Node"]
+script = ExtResource("1")

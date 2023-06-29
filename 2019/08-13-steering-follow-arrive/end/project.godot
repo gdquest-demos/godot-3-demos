@@ -6,29 +6,25 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
+config_version=5
 
 [application]
 
-config/name="Steering behaviors: Follow and Arrive (end)"
+config/name="Steering behaviors: Follow and Arrive (start)"
 run/main_scene="res://src/Game.tscn"
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
 
-Steering="*res://src/Autoload/Steering.gd"
+StreerigNode="*res://src/autoload/streerig_Node.tscn"
 
 [input]
 
 click={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
 }
 
 [layer_names]
@@ -36,6 +32,12 @@ click={
 2d_physics/layer_1="player"
 2d_physics/layer_2="world"
 
+[physics]
+
+common/physics_fps=64
+
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_environment="res://default_env.tres"
+quality/driver/driver_name="GLES2"
